@@ -1,0 +1,358 @@
+.header {
+    padding-top: 2.3rem;
+    position: relative;
+    z-index: 100;
+
+    @include small-tablet {
+        padding-top: 3.6rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        @include small-tablet {
+            justify-content: initial;
+            gap: 11.6rem;
+
+            ._menu-opened & {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @include small-tablet {
+            display: block;
+        }
+    }
+
+    &__logo {
+        @include sizes(17.8rem, 5.7rem);
+        display: block;
+
+        @include small-tablet {
+            @include sizes(27rem, 8.6rem);
+            position: relative;
+            z-index: 2;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        @include small-tablet {
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: calc(100% - 7.4rem);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+            background: $bgColor;
+            padding: 21.4rem 5.2rem 8.8rem 7.8rem;
+
+            ._menu-opened & {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &-contacts {
+            display: none;
+
+            @include small-tablet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 6rem;
+                margin-right: 4rem;
+
+                &-item {
+                    margin-bottom: 2.4rem;
+                    color: rgba(255, 255, 255, 0.67);
+                    font-size: 3.2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 3rem;
+                }
+
+                &-button {
+                    margin-top: 2rem;
+                    border: 0.4rem solid rgba(255, 255, 255, 0.78);
+                    border-radius: 0rem 24rem 24rem 24rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    padding: 1rem 1rem 1rem 4rem;
+                    transition: 0.3s border ease;
+
+                    &:active {
+                        border-color: rgba(255, 255, 255, 0.5);
+
+                        span {
+                            color: $white-secondary;
+                        }
+
+                        .header__menu-contacts-button-icon {
+                            background: $white-secondary;
+                        }
+                    }
+
+                    span {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        transition: 0.3s color ease;
+                    }
+
+                    &-icon {
+                        padding: 1.4rem;
+                        border-radius: 50%;
+                        background: $white;
+                        @include sizes(6.8rem, 6.8rem);
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__nav {
+        @include small-tablet {
+            max-height: 101rem;
+            overflow-x: auto;
+            height: 100%;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 6.3rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7.2rem;
+            }
+        }
+
+        &-item {
+            @include small-tablet {
+                width: 100%;
+
+                &.--active {
+                    a {
+                        color: $green;
+                    }
+                }
+            }
+
+            &-heading {
+                @include small-tablet {
+                    width: 98%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+
+                    &.--active {
+                        .header__nav-item-icon {
+                            transform: rotate(-180deg);
+                        }
+
+                        ~ .header__nav-item-dropdown {
+                            grid-template-rows: 1fr;
+
+                            .header__nav-item-dropdown-wrapper {
+                                margin-top: 4rem;
+                            }
+                        }
+                    }
+
+                    a {
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            &-icon {
+                display: none;
+
+                @include small-tablet {
+                    display: block;
+                    transition: 0.3s transform ease;
+                }
+            }
+
+            &-dropdown {
+                display: none;
+
+                @include small-tablet {
+                    display: grid;
+                    grid-template-rows: 0fr;
+                    transition: 0.3s grid-template-rows ease;
+                }
+
+                &-wrapper {
+                    @include small-tablet {
+                        overflow: hidden;
+                        transition: 0.3s margin ease;
+                        margin-top: 0;
+                        padding-left: 4.8rem;
+                    }
+                }
+
+                &-item {
+                    @include small-tablet {
+                        font-size: 3.2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 3rem;
+
+                        &:not(:first-child) {
+                            margin-top: 5rem;
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                display: block;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem;
+                transition: 0.3s color ease;
+
+                &:hover {
+                    color: $white-secondary;
+                }
+
+                @include small-tablet {
+                    font-size: 3.2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 1.7rem;
+
+        @include small-tablet {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:hover {
+            .header__contacts-title {
+                color: $white-secondary;
+            }
+
+            svg {
+                path {
+                    stroke: $white-secondary;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3rem;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+
+        svg {
+            @include sizes(2.4rem, 2.4rem);
+
+            @include small-tablet {
+                @include sizes(4.8rem, 4.8rem);
+            }
+
+            path {
+                transition: 0.3s stroke ease;
+            }
+        }
+    }
+
+    .hamburger {
+        position: relative;
+        z-index: 2;
+        width: 4.6rem;
+        height: 3.6rem;
+        cursor: pointer;
+
+        span,
+        &::before,
+        &::after {
+            @include pseudo {
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $white;
+                transition:
+                    top 0.3s ease,
+                    width 0.3s ease,
+                    transform 0.3s ease,
+                    bottom 0.3s ease,
+                    background-color 0.3s ease;
+                border-radius: 0.2rem;
+            }
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - 1px);
+        }
+        ._menu-opened & {
+            span {
+                width: 0;
+            }
+            &::before {
+                top: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+            span,
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+    }
+}

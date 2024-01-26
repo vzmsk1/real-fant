@@ -12,6 +12,9 @@ import '../scss/style.scss';
 
 // ---------------------------------- utils ---------------------------------
 
+//hamburger
+import './utils/hamburger.js';
+
 // tabs
 // import './utils/tabs.js';
 
@@ -27,7 +30,7 @@ import '../scss/style.scss';
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
-// import './libs/dd.js';
+import './libs/dd.js';
 
 // --------------------------------------------------------------------------
 
