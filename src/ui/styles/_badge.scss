@@ -1,0 +1,65 @@
+.badge {
+    padding: 1rem 3rem 1rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    border-radius: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2rem);
+    &._active {
+        color: $darkPurple2;
+        background-color: $white;
+        .badge__icon-wrap {
+            background-color: $blue;
+            &::before {
+                background-image: url(./assets/images/icons/star-active.svg);
+            }
+        }
+    }
+    @media (max-width: 48em) {
+        padding: 2rem 8rem 2rem 2rem;
+        column-gap: 3rem;
+        border-radius: 6rem;
+        backdrop-filter: blur(4rem);
+    }
+
+    // .badge__icon-wrap
+
+    &__icon-wrap {
+        position: relative;
+        flex: 0 0 4.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(2rem);
+        &::before {
+            content: '';
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            top: 50%;
+            left: 50%;
+            background-image: url(./assets/images/icons/star.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: 48em) {
+            flex: 0 0 6rem;
+            width: 6rem;
+            height: 6rem;
+            backdrop-filter: blur(4rem);
+            &::before {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+    }
+
+    // .badge__text
+
+    &__text {
+    }
+}

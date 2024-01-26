@@ -15,7 +15,9 @@ $white: #ffffff;
 $white-secondary: rgba(255, 255, 255, 0.69);
 $black: #000000;
 $darkPurple: #11073b;
+$darkPurple2: #140a3f;
 $green: #29ff7f;
+$blue: #182678;
 $bgColor: #101653;
 
 // ---------------------------------- fonts ---------------------------------
@@ -42,11 +44,15 @@ body {
 // main
 main {
     position: relative;
+    flex: 1 1 auto;
 }
 
 .wrapper {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     max-width: 1920px;
+    height: 100%;
 }
 
 // --------------------------------------------------------------------------
