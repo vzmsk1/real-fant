@@ -1,0 +1,247 @@
+.intro {
+    position: relative;
+    margin-top: -8rem;
+    height: 108rem;
+
+    @include small-tablet {
+        height: 164rem;
+    }
+
+    .container {
+        display: flex;
+        height: 100%;
+    }
+
+    @include small-tablet {
+        margin-top: -16rem;
+    }
+
+    &::after {
+        @include pseudo {
+            content: '';
+            position: absolute;
+            background: linear-gradient(0deg, #101653 0%, rgba(23, 15, 67, 0) 63.45%);
+            z-index: -1;
+            inset: 0;
+            bottom: -0.5rem;
+        }
+    }
+
+    &__content {
+        margin-top: auto;
+        padding-bottom: 11.7rem;
+
+        @include small-tablet {
+        }
+    }
+
+    &__title {
+        line-height: 110%;
+        margin-bottom: 5.3rem;
+
+        @include small-tablet {
+            span {
+                color: $green;
+            }
+
+            line-height: 85%;
+            margin-bottom: 7.3rem;
+        }
+    }
+
+    &__poster-image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+
+            @include small-tablet {
+                object-position: -140rem;
+            }
+        }
+    }
+
+    &__subinfo {
+        display: flex;
+        align-items: center;
+        gap: 3.7rem;
+        margin-bottom: 5.9rem;
+
+        @include small-tablet {
+            margin-bottom: 17rem;
+            gap: 5rem;
+        }
+
+        &-projects {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            position: relative;
+
+            &::after {
+                @include pseudo {
+                    left: -2rem;
+                    height: 100%;
+                    width: 0.2rem;
+                    background: rgba(255, 255, 255, 0.2);
+
+                    @include small-tablet {
+                        left: -3rem;
+                        width: .4rem;
+                    }
+                }
+            }
+
+            @include small-tablet {
+                gap: 2.4rem;
+            }
+
+            &-counter {
+                width: 5.8rem;
+                height: 5.8rem;
+                border-radius: 50%;
+                background: $green;
+
+                @include small-tablet {
+                    width: 8.8rem;
+                    height: 8.8rem;
+                }
+
+                span {
+                    color: #1a1a1a;
+                    font-family: $spaceAgeCyr;
+                    font-size: 1.7rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    display: block;
+                    margin-top: 1.6rem;
+                    text-align: center;
+
+                    @include small-tablet {
+                        font-size: 2.48rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 0.7735rem;
+                        margin-top: 3.5rem;
+                    }
+                }
+            }
+
+            &-title {
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    &__articles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(51rem, 1fr));
+        gap: 3.7rem;
+
+        @include small-tablet {
+            grid-template-columns: repeat(3, minmax(15.2rem, 1fr));
+            gap: 2.8rem;
+        }
+    }
+
+    &__article {
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(2rem);
+        position: relative;
+
+        @include small-tablet {
+            border-radius: 2rem;
+        }
+
+        &-link {
+            padding: 1.1rem 6rem 1.1rem 4.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 2.6rem;
+                padding: 11.5rem 2rem 3rem;
+            }
+
+            &:hover {
+                color: $green;
+            }
+
+            &-title {
+                font-size: 2.5rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                max-width: 15rem;
+                display: block;
+                transition: 0.3s color ease;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-align: center;
+                    max-width: 100%;
+                }
+            }
+
+            &-image {
+                @include sizes(20.2rem, 20.2rem);
+                border-radius: 50%;
+
+                @include small-tablet {
+                    position: absolute;
+                    @include sizes(16.2rem, 16.2rem);
+                    top: -6rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                img {
+                    border-radius: inherit;
+                    height: 100%;
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                top: 1rem;
+                right: 1.3rem;
+                padding: 0.6rem;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(2rem);
+                @include sizes(4.6rem, 4.6rem);
+                transition: 0.3s background ease;
+
+                @include small-tablet {
+                    position: static;
+                    padding: 0.8rem;
+                    @include sizes(6rem, 6rem);
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
