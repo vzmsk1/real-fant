@@ -1,0 +1,101 @@
+.marketing {
+    &__image {
+        position: absolute;
+        left: -15.2rem;
+        top: -12rem;
+        max-width: 74rem;
+        width: 100%;
+
+        @include small-tablet {
+            position: static;
+            max-width: 68rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        @include small-tablet {
+            margin-bottom: 4.4rem;
+            text-align: center;
+        }
+    }
+
+    &__info {
+        max-width: 51rem;
+        width: 100%;
+        margin-left: 21rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        &-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 4.1rem;
+            justify-content: space-between;
+            margin-bottom: 5rem;
+
+            @include small-tablet {
+                gap: 3rem;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 3rem;
+            width: 100%;
+
+            @include small-tablet {
+                gap: 2rem;
+            }
+        }
+
+        &-item {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2rem;
+            }
+
+            @include item-dot;
+        }
+
+        &-description {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            max-width: 21.7rem;
+
+            @include small-tablet {
+                max-width: 33.2rem;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+    }
+}

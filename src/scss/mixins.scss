@@ -1,19 +1,42 @@
 @mixin pseudo() {
-  content: '';
-  position: absolute;
-  @content;
+    content: '';
+    position: absolute;
+    @content;
 }
 
 @mixin small-tablet {
-  @media (max-width: 48em) {
-    @content;
-  }
+    @media (max-width: 48em) {
+        @content;
+    }
 }
 
 @mixin sizes($width, $height) {
-  max-width: $width;
-  width: 100%;
-  height: $height;
+    max-width: $width;
+    width: 100%;
+    height: $height;
 
-  @content;
+    @content;
+}
+
+@mixin item-dot() {
+    position: relative;
+
+    &::after {
+        @include pseudo {
+            width: 0.5rem;
+            height: 0.5rem;
+            top: 1.5rem;
+            left: -2rem;
+            border-radius: 50%;
+            background: #ffffff;
+
+            @include small-tablet {
+                top: 0.5rem;
+                width: 1rem;
+                height: 1rem;
+            }
+
+            @content;
+        }
+    }
 }
