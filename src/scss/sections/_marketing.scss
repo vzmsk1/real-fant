@@ -1,4 +1,10 @@
 .marketing {
+    margin-bottom: 23rem;
+
+    @include small-tablet{
+        margin-bottom: 25rem;
+    }
+
     &__image {
         position: absolute;
         left: -15.2rem;
@@ -37,6 +43,14 @@
         max-width: 51rem;
         width: 100%;
         margin-left: 21rem;
+
+        &-request {
+            margin-bottom: 0;
+
+            @include small-tablet{
+                margin-bottom: 0;
+            }
+        }
 
         @include small-tablet {
             max-width: 100%;
