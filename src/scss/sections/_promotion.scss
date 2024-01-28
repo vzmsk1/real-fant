@@ -1,0 +1,95 @@
+.promotion {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem 0 2.9rem;
+        position: relative;
+
+        @include small-tablet {
+            padding: 0;
+            gap: 1rem;
+        }
+
+        &::after {
+            @include pseudo {
+                content: '3';
+                -webkit-text-stroke-width: 0.5rem;
+                -webkit-text-stroke-color: rgba(41, 255, 127, 0.1);
+                font-family: $spaceAgeCyr;
+                font-size: 70rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: $bgColor;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -34rem;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__title {
+        @include small-tablet {
+            letter-spacing: 0.5rem;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+            gap: 1rem;
+
+            &:last-child {
+                .promotion__title {
+                    margin-left: auto;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            text-align: end;
+
+            @include small-tablet {
+                text-align: start;
+            }
+
+            span {
+                display: block;
+                margin-right: 34rem;
+
+                @include small-tablet {
+                    margin-right: auto;
+                }
+            }
+        }
+
+        @include small-tablet {
+            &:nth-child(odd) {
+                text-align: end;
+
+                .promotion__title {
+                    margin-right: 5rem;
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
