@@ -70,10 +70,8 @@
         display: flex;
         align-items: center;
         gap: 3.7rem;
-        margin-bottom: 5.9rem;
 
         @include small-tablet {
-            margin-bottom: 17rem;
             gap: 5rem;
         }
 
@@ -152,10 +150,12 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(51rem, 1fr));
         gap: 3.7rem;
+        margin-top: 5.9rem;
 
         @include small-tablet {
             grid-template-columns: repeat(3, minmax(15.2rem, 1fr));
             gap: 2.8rem;
+            margin-top: 17rem;
         }
     }
 
@@ -227,21 +227,12 @@
                 position: absolute;
                 top: 1rem;
                 right: 1.3rem;
-                padding: 0.6rem;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.2);
-                backdrop-filter: blur(2rem);
-                @include sizes(4.6rem, 4.6rem);
-                transition: 0.3s background ease;
+
+                @include rotated-arrow;
 
                 @include small-tablet {
                     position: static;
                     padding: 0.8rem;
-                    @include sizes(6rem, 6rem);
-                }
-
-                img {
-                    height: 100%;
                 }
             }
         }

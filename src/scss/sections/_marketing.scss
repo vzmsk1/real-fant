@@ -1,5 +1,5 @@
 .marketing {
-    margin-bottom: 23rem;
+    margin-bottom: 29rem;
 
     @include small-tablet{
         margin-bottom: 25rem;
@@ -43,14 +43,6 @@
         max-width: 51rem;
         width: 100%;
         margin-left: 21rem;
-
-        &-request {
-            margin-bottom: 0;
-
-            @include small-tablet{
-                margin-bottom: 0;
-            }
-        }
 
         @include small-tablet {
             max-width: 100%;
