@@ -1,3 +1,9 @@
+@import '../sections/intro';
+@import '../sections/promotion';
+@import '../sections/marketing';
+@import '../sections/benefits';
+@import '../sections/portfolio';
+
 figure {
     margin: 0;
 }
@@ -18,5 +24,17 @@ body::after {
 
     ._menu-opened & {
         opacity: 1;
+    }
+}
+
+@media (min-width: 48.01em) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .desktop {
+        display: none;
     }
 }

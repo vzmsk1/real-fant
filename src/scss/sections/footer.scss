@@ -1,0 +1,119 @@
+.footer {
+    padding-bottom: 7.8rem;
+
+    @include small-tablet {
+        padding-bottom: 11rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include small-tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-top: 0.5rem;
+
+        @include small-tablet {
+            gap: 3rem;
+        }
+
+        &:last-child {
+            @media (min-width: 48em) {
+                align-items: flex-end;
+            }
+
+            @include small-tablet {
+                margin-right: 5rem;
+            }
+
+            .footer__item {
+                &:last-child {
+                    a {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        a {
+            display: block;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3rem;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 3rem;
+            }
+
+            &:hover {
+                color: $white-secondary;
+            }
+        }
+    }
+
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @include small-tablet {
+            grid-column: span 2;
+            order: -1;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+        @include sizes(10.9rem, 13rem);
+        margin-bottom: 6.1rem;
+
+        @include small-tablet {
+            @include sizes(27rem, 8.6rem);
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+
+        @include small-tablet {
+            display: none;
+        }
+    }
+
+    &__contact {
+        a {
+            display: block;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            transition: 0.3s color ease;
+
+            &:hover {
+                color: $white-secondary;
+            }
+        }
+    }
+}
