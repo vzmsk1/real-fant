@@ -176,6 +176,28 @@
         }
     }
 
+    .sites-page & {
+        padding-top: 37rem;
+        margin-bottom: 24.5rem;
+
+        @include small-tablet {
+            padding-top: 69rem;
+            margin-bottom: 28.5rem;
+        }
+
+        .intro__poster-image {
+            img {
+                @include small-tablet {
+                    object-position: -122rem -3rem;
+                }
+            }
+        }
+
+        .intro__content {
+            padding-bottom: 0;
+        }
+    }
+
     .container {
         display: flex;
         height: 100%;

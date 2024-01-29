@@ -9,6 +9,10 @@
         }
     }
 
+    .sites-page & {
+        margin-bottom: 26.7rem;
+    }
+
     @include small-tablet {
         margin-bottom: 26rem;
     }
