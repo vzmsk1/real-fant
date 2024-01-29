@@ -7,17 +7,14 @@
     }
 }
 
-
-                    ._desktop-only {
-                        @media (max-width: 48em){
-                        display: none;
-
-                        }
-                    }
-                    ._mobile-only {
-                        display: none;
-                        @media (max-width: 48em){
-                            display: block;
-
-                        }
-                    }
+._desktop-only {
+  @media (max-width: 48em){
+    display: none;
+}
+  }
+ ._mobile-only {
+   display: none;
+  @media (max-width: 48em){
+     display: block;
+   }
+ }

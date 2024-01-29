@@ -7,10 +7,6 @@
 
     &__heading {
         margin-bottom: 6.3rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
 
         @include small-tablet {
             flex-direction: column;
