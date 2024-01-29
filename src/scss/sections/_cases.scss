@@ -1,0 +1,190 @@
+.cases {
+    margin-bottom: 20rem;
+
+    // .cases__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .cases__head
+
+    &__head {
+        margin-bottom: 6.8rem;
+        @media (max-width: 48em) {
+            .group__button {
+                display: none;
+            }
+        }
+    }
+
+    // .cases__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .cases__carousel
+
+    &__carousel {
+        @media (min-width: 48em) {
+            position: relative;
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    // .cases__slider
+
+    &__slider {
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+            &.swiper {
+                overflow: visible;
+            }
+        }
+    }
+
+    // .cases__wrapper
+
+    &__wrapper {
+    }
+
+    // .cases__slide
+
+    &__slide {
+    }
+
+    // .cases__bullets
+
+    &__bullets {
+        justify-content: center;
+        @media (min-width: 48em) {
+            position: absolute;
+            z-index: 2;
+            bottom: 2.1rem;
+            right: 2.2rem;
+            justify-content: stretch;
+        }
+    }
+
+    // .cases__btn
+
+    &__btn {
+        &.btn {
+            padding: 1rem 1rem 1rem 6rem;
+            column-gap: 6rem;
+            @media (min-width: 48em) {
+                padding: 0.6rem 0.6rem 0.6rem 4rem;
+                align-self: center;
+                column-gap: 4rem;
+            }
+        }
+    }
+}
+
+.slide-cases {
+    @media (min-width: 48em) {
+        padding: 1.9rem 2.2rem 3.5rem 2.2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        &::after {
+            content: none;
+        }
+    }
+
+    // .slide-cases__image-wrap
+
+    &__image-wrap {
+        position: relative;
+        margin-bottom: 3rem;
+        height: 64rem;
+        @media (max-width: 48em) {
+            margin-bottom: 9rem;
+            height: 74rem;
+            width: 72rem;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                position: absolute;
+                top: calc(100% + 4rem);
+                left: 0;
+                right: 3.2rem;
+                height: 0.6rem;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                height: 1rem;
+                border-radius: 6rem;
+                background-color: $white;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 6rem;
+                height: 0.6rem;
+            }
+        }
+    }
+
+    // .slide-cases__image
+
+    &__image {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        @media (max-width: 48em) {
+            position: absolute;
+            top: 0;
+            left: auto;
+            width: auto;
+            height: 64rem;
+            border-radius: 2.5rem;
+            object-fit: contain;
+        }
+    }
+
+    // .slide-cases__content
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 48em) {
+            padding: 3.8rem 3rem 4.4rem 3rem;
+            border-radius: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -9.5rem;
+                left: 0;
+                width: calc(100% + 3.2rem);
+                height: 0.6rem;
+                border-radius: 6rem;
+                background-color: $white;
+                opacity: 0.25;
+            }
+        }
+    }
+
+    // .slide-cases__title
+
+    &__title {
+        margin-bottom: 0.7rem;
+        @media (max-width: 48em) {
+            margin-bottom: 0.4rem;
+        }
+    }
+
+    // .slide-cases__subtitle
+
+    &__subtitle {
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+        }
+    }
+}
