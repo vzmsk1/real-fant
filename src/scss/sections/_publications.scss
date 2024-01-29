@@ -2,6 +2,10 @@
     margin-top: -96rem;
     margin-bottom: 18.6rem;
 
+    .article-page & {
+        margin: 0 0 14rem;
+    }
+
     @include small-tablet {
         margin-top: -29rem;
     }
