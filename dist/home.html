@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Главная</title>
-    <script defer src="home.js"></script></head>
+    <script defer src="home.js"></script><link href="home.css" rel="stylesheet"></head>
     <body>
         <div class="wrapper home-page">
             <header class="header">
@@ -114,21 +114,20 @@
                 и приложений
             </h1>
 
+            <div class="intro__group group">
+                <button type="button" class="group__button btn btn_arr-down">
+                    <span class="btn__text">Оставить заявку</span>
+                    <span class="btn__arrow-wrap btn__arrow-wrap">
+                        <img aria-hidden="true" src="./assets/images/icons/arr.svg" alt="" class="btn__arrow-icon">
+                    </span>
+                </button>
 
-                <div class="intro__group group">
-                    <button type="button" class="group__button btn ">
-                        <span class="btn__text">Оставить заявку</span>
-                        <span class="btn__arrow-wrap btn__arrow-wrap">
-                            <img aria-hidden="true" src="./assets/images/icons/arr.svg" alt="" class="btn__arrow-icon">
-                        </span>
-                    </button>
+                <div class="group__projects">
+                    <div class="group__counter"><span>50+</span></div>
 
-                    <div class="group__projects">
-                        <div class="group__counter"><span>50+</span></div>
-
-                        <p class="group__title">проектов</p>
-                    </div>
+                    <p class="group__title">проектов</p>
                 </div>
+            </div>
 
             <div class="intro__articles">
                 <article class="intro__article">
@@ -524,8 +523,8 @@
 
             <div class="footer__middle">
                 <a href="#" class="footer__logo">
-                    <img src="./assets/images/icons/logo-vertical.svg" alt="" class="desktop">
-                    <img src="./assets/images/icons/logo.svg" alt="" class="mobile">
+                    <img src="./assets/images/icons/logo-vertical.svg" alt="" class="_desktop-only">
+                    <img src="./assets/images/icons/logo.svg" alt="" class="_mobile-only">
                 </a>
 
                 <ul class="footer__contacts">

@@ -1,6 +1,18 @@
 .benefits {
     margin-bottom: 17.7rem;
 
+    .landing-page & {
+        margin-bottom: 31.7rem;
+
+        @include small-tablet {
+            margin-bottom: 15.7rem;
+        }
+    }
+
+    .sites-page & {
+        margin-bottom: 26.7rem;
+    }
+
     @include small-tablet {
         margin-bottom: 26rem;
     }

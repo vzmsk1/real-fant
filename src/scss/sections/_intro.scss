@@ -9,6 +9,195 @@
         padding-top: 68rem;
     }
 
+    .publications-page & {
+        height: 172.3rem;
+        padding-top: 48rem;
+
+        @include small-tablet {
+            padding-top: 74rem;
+            height: 124rem;
+
+            .intro__poster-image img {
+                object-position: -35rem;
+            }
+        }
+
+        .intro__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.9rem;
+            width: 100%;
+
+            @include small-tablet {
+                gap: 0;
+            }
+        }
+
+        .intro__content {
+            margin-top: 0;
+        }
+    }
+
+    .landing-page & {
+        padding-top: 48rem;
+
+        @include small-tablet {
+            padding-top: 74rem;
+        }
+    }
+
+    .cases-page & {
+        padding-top: 56rem;
+
+        @include small-tablet {
+            padding-top: 79rem;
+        }
+
+        .intro__content {
+            width: 100%;
+        }
+
+        &__categories {
+            &-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+                margin-top: 6rem;
+                width: 100%;
+
+                @include small-tablet {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2.8rem;
+                    margin-top: 11rem;
+                }
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 2.6rem;
+                border-radius: 3rem;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(2rem);
+                padding: 0.9rem 3rem 0.9rem 1.1rem;
+                cursor: pointer;
+                transition: 0.3s background ease;
+
+                @include small-tablet {
+                    padding: 1.8rem;
+                    border-radius: 4rem;
+                    gap: 3.6rem;
+                }
+
+                &:hover {
+                    .intro__categories-item-icon {
+                        background: $blue;
+                    }
+
+                    .intro__categories-item-title {
+                        color: $darkPurple2;
+                    }
+
+                    background: $white;
+                }
+
+                &.--active {
+                    background: $white;
+
+                    .intro__categories-item-title {
+                        color: $darkPurple2;
+                    }
+
+                    .intro__categories-item-icon {
+                        background: $blue;
+                    }
+                }
+
+                &-icon {
+                    border-radius: 50%;
+                    width: 4.6rem;
+                    height: 4.6rem;
+                    background: rgba(255, 255, 255, 0.2);
+                    position: relative;
+                    transition: 0.3s background ease;
+
+                    @include small-tablet {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: auto;
+                        height: auto;
+                    }
+                }
+
+                &-title {
+                    font-size: 2.5rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    transition: 0.3s color ease;
+                    display: block;
+                    white-space: nowrap;
+
+                    @include small-tablet {
+                        text-align: center;
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        white-space: initial;
+                    }
+                }
+            }
+        }
+
+        .intro__poster-image {
+            @include small-tablet {
+                bottom: 38rem;
+            }
+
+            img {
+                object-position: 0 0;
+
+                @include small-tablet {
+                    object-position: -60rem;
+                }
+            }
+        }
+    }
+
+    .sites-page & {
+        padding-top: 37rem;
+        margin-bottom: 24.5rem;
+
+        @include small-tablet {
+            padding-top: 69rem;
+            margin-bottom: 28.5rem;
+        }
+
+        .intro__poster-image {
+            img {
+                @include small-tablet {
+                    object-position: -122rem -3rem;
+                }
+            }
+        }
+
+        .intro__content {
+            padding-bottom: 0;
+        }
+    }
+
     .container {
         display: flex;
         height: 100%;
@@ -35,9 +224,6 @@
     &__content {
         margin-top: auto;
         padding-bottom: 11.7rem;
-
-        @include small-tablet {
-        }
     }
 
     &__title {
@@ -47,18 +233,16 @@
 
         .promo-page & {
             max-width: 118rem;
-
         }
 
         @include small-tablet {
             .promo-page & {
-                    max-width: 62rem;
-                    font-family: "Space Age Cyrillic";
+                max-width: 62rem;
+                font-family: 'Space Age Cyrillic';
             }
             span {
                 &:not(&.txt-green) {
-                color: $green;
-
+                    color: $green;
                 }
             }
 
@@ -75,7 +259,12 @@
         &_has-backdrop {
             &::after {
                 content: '';
-                position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.3);
             }
         }
 
@@ -101,7 +290,6 @@
         }
 
         &-projects {
-
             &-counter {
             }
 
@@ -115,6 +303,16 @@
         grid-template-columns: repeat(3, minmax(51rem, 1fr));
         gap: 3.7rem;
         margin-top: 5.9rem;
+
+        .article-page & {
+            margin-top: 3rem;
+            margin-bottom: 10.1rem;
+
+            @include small-tablet {
+                margin-top: 14rem;
+                margin-bottom: 5.1rem;
+            }
+        }
 
         @include small-tablet {
             grid-template-columns: repeat(3, minmax(15.2rem, 1fr));
@@ -151,7 +349,6 @@
                 padding: 11.5rem 2rem 3rem;
             }
 
-
             &-title {
                 font-size: 2.5rem;
                 font-style: normal;
@@ -159,6 +356,10 @@
                 line-height: normal;
                 max-width: 18rem;
                 transition: 0.3s color ease;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
 
                 @include small-tablet {
                     font-size: 2.8rem;

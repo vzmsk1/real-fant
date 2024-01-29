@@ -1,6 +1,7 @@
 .marketing {
     margin-bottom: 29rem;
 
+    @include small-tablet {
     .group__button {
         padding: 0.6rem 0.6rem 0.6rem 3.5rem;
         column-gap: 3.5rem;
@@ -33,12 +34,37 @@
         margin-bottom: 25rem;
     }
 
+    .sites-page & {
+        .marketing__image {
+            top: -5rem;
+        }
+
+        .marketing__title {
+            max-width: 20rem;
+            margin-bottom: 6rem;
+        }
+
+        .marketing__info {
+            &-row {
+                margin-bottom: 7rem;
+            }
+
+            max-width: 64rem;
+            margin-left: 34rem;
+
+            @include small-tablet{
+                margin-left: 0;
+            }
+        }
+    }
+
     &__image {
         position: absolute;
         left: -15.2rem;
         top: -12rem;
         max-width: 74rem;
         width: 100%;
+
         @include small-tablet {
             position: static;
             max-width: 68rem;

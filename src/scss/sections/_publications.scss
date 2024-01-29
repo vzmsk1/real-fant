@@ -1,0 +1,111 @@
+.publications {
+    margin-top: -96rem;
+    margin-bottom: 18.6rem;
+
+    .article-page & {
+        margin: 0 0 14rem;
+    }
+
+    @include small-tablet {
+        margin-top: -29rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(51rem, 1fr));
+        gap: 12.5rem 3.7rem;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 12.5rem;
+        }
+    }
+
+    &__item {
+        padding: 17.9rem 3.1rem 2.9rem;
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(2rem);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include small-tablet {
+            border-radius: 3rem;
+            padding: 29rem 3.2rem 3rem;
+        }
+
+        &:hover {
+            .publications__item-details {
+                color: $green;
+            }
+        }
+
+        &-image {
+            @include sizes(44.4rem, 24.1rem);
+            border-radius: 3rem;
+            position: absolute;
+            top: -8.6rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include small-tablet {
+                @include sizes(63rem, 32.6rem);
+                border-radius: 3rem;
+                top: -8.2rem;
+            }
+
+            img {
+                height: 100%;
+                border-radius: inherit;
+                object-fit: cover;
+            }
+        }
+
+        &-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 1.8rem;
+
+            @include small-tablet {
+                font-size: 2.48rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        &-details {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 3rem;
+            }
+        }
+
+        &-icon {
+            @include rotated-arrow;
+        }
+    }
+}

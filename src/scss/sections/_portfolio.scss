@@ -1,6 +1,14 @@
 .portfolio {
     margin-bottom: 18.5rem;
 
+    .cases-page & {
+        margin-top: -6rem;
+
+        @include small-tablet {
+            margin-top: -17rem;
+        }
+    }
+
     @include small-tablet {
         margin-bottom: 27rem;
     }
