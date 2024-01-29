@@ -1,12 +1,12 @@
 .intro {
     position: relative;
     margin-top: -8rem;
-    height: 108rem;
     margin-bottom: 10.5rem;
+    padding-top: 40rem;
 
     @include small-tablet {
-        height: 164rem;
         margin-bottom: 15.5rem;
+        padding-top: 68rem;
     }
 
     .container {
@@ -16,6 +16,9 @@
 
     @include small-tablet {
         margin-top: -16rem;
+        &::after {
+            background: linear-gradient(0deg, #101653 13%, rgba(23, 15, 67, 0) 75.45%);
+        }
     }
 
     &::after {
@@ -38,12 +41,25 @@
     }
 
     &__title {
+        display: block;
         line-height: 110%;
         margin-bottom: 5.3rem;
 
+        .promo-page & {
+            max-width: 118rem;
+
+        }
+
         @include small-tablet {
+            .promo-page & {
+                    max-width: 62rem;
+                    font-family: "Space Age Cyrillic";
+            }
             span {
+                &:not(&.txt-green) {
                 color: $green;
+
+                }
             }
 
             line-height: 85%;
@@ -56,12 +72,21 @@
         inset: 0;
         z-index: -1;
 
+        &_has-backdrop {
+            &::after {
+                content: '';
+                position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+
         img {
             height: 100%;
             object-fit: cover;
 
             @include small-tablet {
-                object-position: -140rem;
+                .home-page & {
+                    object-position: -140rem;
+                }
             }
         }
     }
@@ -100,12 +125,14 @@
             }
 
             &-counter {
+                flex: 0 0 5.8rem;
                 width: 5.8rem;
                 height: 5.8rem;
                 border-radius: 50%;
                 background: $green;
 
                 @include small-tablet {
+                    flex: 0 0 8.8rem;
                     width: 8.8rem;
                     height: 8.8rem;
                 }
@@ -131,10 +158,7 @@
             }
 
             &-title {
-                font-size: 1.8rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
+                max-width: 23rem;
 
                 @include small-tablet {
                     font-size: 2.8rem;
@@ -165,6 +189,10 @@
         backdrop-filter: blur(2rem);
         position: relative;
 
+        a:hover {
+            color: $green;
+        }
+
         @include small-tablet {
             border-radius: 2rem;
         }
@@ -179,20 +207,17 @@
             @include small-tablet {
                 flex-direction: column;
                 gap: 2.6rem;
+                height: 100%;
                 padding: 11.5rem 2rem 3rem;
             }
 
-            &:hover {
-                color: $green;
-            }
 
             &-title {
                 font-size: 2.5rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                max-width: 15rem;
-                display: block;
+                max-width: 18rem;
                 transition: 0.3s color ease;
 
                 @include small-tablet {
@@ -202,24 +227,28 @@
                     line-height: normal;
                     text-align: center;
                     max-width: 100%;
+                    flex: 1 1 auto;
                 }
             }
 
             &-image {
                 @include sizes(20.2rem, 20.2rem);
+                flex: 0 0 20.2rem;
                 border-radius: 50%;
 
                 @include small-tablet {
                     position: absolute;
                     @include sizes(16.2rem, 16.2rem);
-                    top: -6rem;
+                    flex: 0 0 16.2rem;
+                    top: 0;
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: translate(-50%, -50%);
                 }
 
                 img {
                     border-radius: inherit;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
 
@@ -227,6 +256,14 @@
                 position: absolute;
                 top: 1rem;
                 right: 1.3rem;
+
+                &_has-number {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 300;
+                    transition: color 0.3s ease;
+                }
 
                 @include rotated-arrow;
 
