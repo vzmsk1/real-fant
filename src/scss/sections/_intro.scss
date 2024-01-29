@@ -30,7 +30,7 @@
             gap: 0.9rem;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 gap: 0;
             }
         }
@@ -146,6 +146,16 @@
         gap: 3.7rem;
         margin-top: 5.9rem;
 
+        .article-page & {
+            margin-top: 3rem;
+            margin-bottom: 10.1rem;
+
+            @include small-tablet {
+                margin-top: 14rem;
+                margin-bottom: 5.1rem;
+            }
+        }
+
         @include small-tablet {
             grid-template-columns: repeat(3, minmax(15.2rem, 1fr));
             gap: 2.8rem;
@@ -188,6 +198,10 @@
                 line-height: normal;
                 max-width: 18rem;
                 transition: 0.3s color ease;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
 
                 @include small-tablet {
                     font-size: 2.8rem;

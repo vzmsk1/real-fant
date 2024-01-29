@@ -1,0 +1,176 @@
+.article {
+    margin-bottom: 14.9rem;
+
+    &__heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 7.8rem;
+
+        @include small-tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            margin-bottom: 3.8rem;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 1.1rem;
+
+            @include small-tablet {
+                gap: 2.6rem;
+                order: 1;
+                grid-column: span 1;
+            }
+
+            &:hover {
+                .article__heading-link-text {
+                    color: $green;
+                }
+
+                .article__heading-link-arrow {
+                    background: $green;
+
+                    svg path {
+                        stroke: $white;
+                    }
+                }
+            }
+
+            &-arrow {
+                padding: 1rem;
+                background: $white;
+                border-radius: 50%;
+                @include sizes(4.4rem, 4.4rem);
+                transition: 0.3s background ease;
+
+                @include small-tablet {
+                    padding: 1.4rem;
+                    @include sizes(6.8rem, 6.8rem);
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+
+                    path {
+                        transition: 0.3s stroke ease;
+                    }
+                }
+            }
+
+            &-text {
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                transition: 0.3s color ease;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+        &-poster {
+            @include sizes(85.2rem, 37.3rem);
+            border-radius: 3rem;
+            margin-left: 16rem;
+
+            @include small-tablet {
+                margin-left: 0;
+                grid-column: span 3;
+                border-radius: 6rem;
+                margin-bottom: 5.2rem;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+
+        &-date {
+            font-family: $spaceAgeCyr;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-top: 1.1rem;
+
+            @include small-tablet {
+                order: 2;
+                text-align: right;
+                font-size: 4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-top: 0;
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 85.2rem;
+        gap: 2rem;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        @include small-tablet {
+            max-width: 100%;
+            font-size: 2.8rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 9.2rem;
+        text-align: center;
+        font-family: $spaceAgeCyr;
+        font-size: 6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include small-tablet {
+            margin-bottom: 7rem;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+
+        @include small-tablet {
+            padding-left: 4rem;
+        }
+    }
+
+    &__item {
+        @include item-dot {
+            top: 1rem;
+
+            @include small-tablet {
+                top: 2rem;
+                left: -3rem;
+            }
+        }
+    }
+}
