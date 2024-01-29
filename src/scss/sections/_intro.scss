@@ -9,7 +9,7 @@
         padding-top: 68rem;
     }
 
-    &.--publications {
+    .publications-page & {
         height: 172.3rem;
         padding-top: 48rem;
 
@@ -37,6 +37,14 @@
 
         .intro__content {
             margin-top: 0;
+        }
+    }
+
+    .landing-page & {
+        padding-top: 48rem;
+
+        @include small-tablet {
+            padding-top: 74rem;
         }
     }
 
