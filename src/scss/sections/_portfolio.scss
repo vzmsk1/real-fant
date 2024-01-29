@@ -9,8 +9,6 @@
         margin-bottom: 6.3rem;
 
         @include small-tablet {
-            flex-direction: column;
-            gap: 8rem;
             margin-bottom: 8rem;
         }
     }
@@ -114,8 +112,8 @@
         &-icon {
             @include rotated-arrow;
 
-            @include small-tablet{
-                padding: .6rem;
+            @include small-tablet {
+                padding: 0.6rem;
                 @include sizes(5.2rem, 5.2rem);
             }
         }

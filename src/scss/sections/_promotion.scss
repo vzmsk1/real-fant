@@ -1,6 +1,133 @@
 .promotion {
     margin-bottom: 31rem;
 
+    &_real-fant {
+        margin-bottom: 28rem;
+        .promotion {
+            &__content {
+                &::after {
+                    content: none;
+                }
+            }
+            &__title {
+                display: flex;
+                flex-direction: column;
+                .promotion__title-txt {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-start;
+                    span {
+                        font-family: 'Euclid Circular A';
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                    }
+                    &:nth-child(2) {
+                        align-self: flex-end;
+                        span {
+                            align-self: flex-end;
+                        }
+                    }
+                    &:last-child {
+                        span {
+                            align-self: flex-end;
+                        }
+                    }
+                }
+                @media (max-width: 48em) {
+                    row-gap: 5rem;
+                    font-size: 5.2rem;
+                    transform: translateY(7rem);
+                    letter-spacing: normal;
+                    .promotion__title-txt {
+                        &:first-child {
+                            transform: translateX(10rem);
+                        }
+                        &:nth-child(2) {
+                            align-self: center;
+                            transform: translateX(-1.5rem);
+                            font-size: 4.8rem;
+                        }
+                        &:nth-child(3),
+                        &:last-child {
+                            margin: 0;
+                            align-self: flex-end;
+                            transform: translateX(2rem);
+                        }
+                        &:nth-child(4) {
+                            transform: translateX(-1.5rem);
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__block {
+                @media (min-width: 48em) {
+                    &._mobile-only {
+                        display: none;
+                    }
+                }
+                @media (max-width: 48em) {
+                    margin-bottom: 12rem;
+                }
+            }
+            &__list {
+                @media (max-width: 48em) {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 4rem;
+                }
+            }
+        }
+    }
+
+    &__bg-text {
+        position: absolute;
+        z-index: -1;
+        top: -13rem;
+        left: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-50%);
+
+        @media (max-width: 48em) {
+            width: calc(100vw - 9rem);
+            left: 1rem;
+            row-gap: 23rem;
+            transform: none;
+            .bg-text__content {
+                display: flex;
+                flex-direction: column;
+                span {
+                    align-self: flex-start;
+                    transform: translateX(-3rem);
+                }
+                &:first-child {
+                    span:first-child {
+                        align-self: flex-end;
+                        transform: translateX(4rem);
+                    }
+                }
+                &:last-child {
+                    span:last-child {
+                        align-self: flex-end;
+                        transform: translateX(4rem);
+                    }
+                }
+            }
+        }
+        @media (min-width: 48em) {
+            .bg-text__content {
+                align-self: flex-end;
+                &:last-child {
+                    align-self: flex-start;
+                }
+            }
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;

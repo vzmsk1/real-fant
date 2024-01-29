@@ -1,20 +1,25 @@
 .txt-green {
-        color: $green;
+    color: $green;
     &_do {
-        @media (max-width: 48em){
-             color: inherit;
+        @media (max-width: 48em) {
+            color: inherit;
         }
     }
 }
 
 ._desktop-only {
-  @media (max-width: 48em){
-    display: none;
+    @media (max-width: 48em) {
+        display: none;
+    }
 }
-  }
- ._mobile-only {
-   display: none;
-  @media (max-width: 48em){
-     display: block;
-   }
- }
+._mobile-only {
+    display: none;
+    @media (max-width: 48em) {
+        display: block;
+    }
+}
+
+// --------------------------------------------------------------------------
+
+@import '../sections/cases';
+@import '../sections/info-block';
