@@ -143,6 +143,7 @@ module.exports = {
         index: path.resolve(__dirname, 'src/js', 'app.js'),
         home: path.resolve(__dirname, 'src/js', 'app.js'),
         promo: path.resolve(__dirname, 'src/js', 'app.js'),
+        publications: path.resolve(__dirname, 'src/js', 'app.js')
     },
     // entry: getEntries(),
     output: {
