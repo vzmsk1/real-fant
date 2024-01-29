@@ -1,14 +1,11 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Pagination, EffectFade } from 'swiper/modules';
-import gsap from 'gsap';
-import { Draggable } from 'gsap/Draggable';
+import Inputmask from 'inputmask';
 
 // --------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
-    gsap.registerPlugin(Draggable);
-
     const dragElement = () => {
         if (document.querySelectorAll('[data-draggable]').length) {
             document.querySelectorAll('[data-draggable]').forEach((el) => {});
@@ -43,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
     initSliders();
+
+    /**
+     * adds input mask to input elements with data attributes
+     */
+    const addInputMask = () => {
+        if (document.querySelectorAll('[data-tel-mask]').length) {
+            document.querySelectorAll('[data-tel-mask]').forEach((telInput) => {
+                Inputmask({ mask: '+7 (999) 999-9999', showMaskOnHover: false, jitMasking: true }).mask(
+                    telInput
+                );
+            });
+        }
+    };
+    addInputMask();
 
     /**
      * handles click events
