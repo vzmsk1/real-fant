@@ -17,8 +17,6 @@
         margin-bottom: 6.3rem;
 
         @include small-tablet {
-            flex-direction: column;
-            gap: 8rem;
             margin-bottom: 8rem;
         }
     }

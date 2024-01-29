@@ -1,0 +1,124 @@
+.info-block {
+    margin-bottom: 21.3rem;
+    @media (max-width: 48em) {
+        margin-bottom: 25rem;
+    }
+
+    // .info-block__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 48em) {
+            &.container {
+                width: 75.1rem;
+            }
+        }
+    }
+
+    // .info-block__image-wrap
+
+    &__image-wrap {
+        margin-bottom: 5rem;
+        width: 59.3rem;
+        align-self: center;
+        @media (max-width: 48em) {
+            margin-bottom: 5rem;
+            width: 50.4rem;
+        }
+    }
+
+    // .info-block__image
+
+    &__image {
+        object-fit: contain;
+        mix-blend-mode: lighten;
+    }
+
+    // .info-block__title
+
+    &__title {
+        margin-bottom: 4.6rem;
+        align-self: center;
+        max-width: 49rem;
+        font-family: $spaceAge;
+        text-align: center;
+        @media (max-width: 48em) {
+            margin-bottom: 8rem;
+            max-width: 63rem;
+        }
+    }
+
+    // .info-block__text-wrap
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .info-block__text
+
+    &__text {
+        &_head {
+            margin-bottom: 2.5rem;
+            @media (max-width: 48em) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    // .info-block__list-wrap
+
+    &__list-wrap {
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 48em) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    // .info-block__subtitle
+
+    &__subtitle {
+        margin-bottom: 2.5rem;
+    }
+
+    // .info-block__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        list-style: inside;
+        @media (max-width: 48em) {
+            row-gap: 1.5rem;
+        }
+    }
+
+    // .info-block__list-item
+
+    &__list-item {
+        position: relative;
+        padding-left: 3rem;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0.8rem;
+            left: 1.2rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: $white;
+        }
+        @media (max-width: 48em) {
+            padding-left: 5rem;
+            &::before {
+                top: 1.2rem;
+                left: 2.2rem;
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+        }
+    }
+}
