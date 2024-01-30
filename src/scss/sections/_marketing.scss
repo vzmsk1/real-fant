@@ -29,6 +29,43 @@
         }
     }
 
+    .shop-page & {
+        .marketing__image {
+            @include small-tablet{
+                transform: translateX(-8rem);
+                margin-bottom: 8rem;
+            }
+        }
+
+        .marketing__info {
+            max-width: 75rem;
+            margin-left: 45rem;
+
+            @include small-tablet{
+                max-width: 100%;
+                margin-left: 0;
+            }
+
+            &-list {
+                @include small-tablet{
+                    gap: .5rem;
+                }
+            }
+
+            &-item {
+                @include small-tablet{
+                    &::after{
+                        top: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .marketing__title {
+            margin-bottom: 3.8rem;
+        }
+    }
+
     &__image {
         position: absolute;
         left: -15.2rem;
