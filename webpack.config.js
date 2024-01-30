@@ -147,7 +147,8 @@ module.exports = {
         article: path.resolve(__dirname, 'src/js', 'app.js'),
         landing: path.resolve(__dirname, 'src/js', 'app.js'),
         cases: path.resolve(__dirname, 'src/js', 'app.js'),
-        sites: path.resolve(__dirname, 'src/js', 'app.js')
+        sites: path.resolve(__dirname, 'src/js', 'app.js'),
+        contacts: path.resolve(__dirname, 'src/js', 'app.js')
     },
     // entry: getEntries(),
     output: {
