@@ -149,6 +149,7 @@ module.exports = {
         cases: path.resolve(__dirname, 'src/js', 'app.js'),
         sites: path.resolve(__dirname, 'src/js', 'app.js'),
         contacts: path.resolve(__dirname, 'src/js', 'app.js'),
+        project: path.resolve(__dirname, 'src/js', 'app.js'),
         "internet-shop": path.resolve(__dirname, 'src/js', 'app.js')
     },
     // entry: getEntries(),

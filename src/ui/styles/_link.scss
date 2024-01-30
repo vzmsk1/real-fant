@@ -1,0 +1,75 @@
+.link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &_ol {
+        .link__arrow {
+            border: 1px solid $white;
+            background: transparent;
+            transition: border 0.3s ease;
+            svg path {
+                stroke: $white;
+            }
+        }
+        &:hover {
+            .link__arrow {
+                border: 1px solid $green;
+
+                svg path {
+                    stroke: $green;
+                }
+            }
+        }
+    }
+
+    @include small-tablet {
+        gap: 2.6rem;
+    }
+
+    &:hover {
+        .link__text {
+            color: $green;
+        }
+
+        &:not(&.link_ol) {
+            .link__arrow {
+                background: $green;
+
+                svg path {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+
+    // .link__arrow
+
+    &__arrow {
+        padding: 1rem;
+        background: $white;
+        border-radius: 50%;
+        @include sizes(4.4rem, 4.4rem);
+        transition: 0.3s background ease;
+
+        @include small-tablet {
+            padding: 1.4rem;
+            @include sizes(6.8rem, 6.8rem);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            path {
+                transition: 0.3s stroke ease;
+            }
+        }
+    }
+
+    // .link__text
+
+    &__text {
+        transition: 0.3s color ease;
+    }
+}
