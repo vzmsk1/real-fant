@@ -43,6 +43,7 @@ input:focus {
         line-height: 1;
         &::placeholder {
             color: $white;
+            transition: color 0.3s ease;
         }
     }
 
@@ -54,6 +55,9 @@ input:focus {
         left: 2.7rem;
         white-space: nowrap;
         opacity: 0.5;
+        transition:
+            color 0.3s ease,
+            opacity 0.3s ease;
         @media (max-width: 48em) {
             top: 2.4rem;
             left: 2.4rem;
@@ -63,5 +67,10 @@ input:focus {
     &._form-focus {
     }
     &._form-error {
+        .input__field::placeholder,
+        .input__label {
+            color: rgb(201 39 39);
+            opacity: 1;
+        }
     }
 }

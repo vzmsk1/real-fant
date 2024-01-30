@@ -59,6 +59,7 @@
         &._select-label {
             &::before {
                 content: attr(data-sel-label);
+                transition: color 0.3s ease;
                 ._select-filled & {
                     display: none;
                 }
@@ -221,6 +222,11 @@
     }
     &._select-error {
         &:not(&._select-filled, &._select-opened) {
+            .select__value._select-label {
+                &::before {
+                    color: rgb(201 39 39);
+                }
+            }
         }
     }
     &._select-filled {
