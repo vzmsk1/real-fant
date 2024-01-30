@@ -140,9 +140,7 @@ module.exports = {
     },
 
     entry: {
-        index: path.resolve(__dirname, 'src/js', 'app.js'),
-        home: path.resolve(__dirname, 'src/js', 'app.js'),
-        promo: path.resolve(__dirname, 'src/js', 'app.js'),
+        main: path.resolve(__dirname, 'src', 'index.js')
         publications: path.resolve(__dirname, 'src/js', 'app.js'),
         article: path.resolve(__dirname, 'src/js', 'app.js'),
         landing: path.resolve(__dirname, 'src/js', 'app.js'),
