@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Контакты</title>
-    <script defer src="contacts.js"></script></head>
-    <body>
-        <div class="wrapper contacts-page">
-            <header class="header">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проект</title>
+<script defer src="project.js"></script></head>
+
+<body>
+    <div class="wrapper project-page">
+        <header class="header">
     <div class="container">
         <div class="header__content">
             <button type="button" class="header__burger hamburger">
@@ -101,88 +103,47 @@
     </div>
 </header>
 
-            <main>
-                <section class="contacts">
-    <div class="contacts__container container">
-        <div class="contacts__content">
-            <div class="contacts__info">
-                <span data-da=".contacts__content,768,first" class="contacts__title title">Обратная связь</span>
-                <ul class="contacts__list list-contacts">
-                    <li class="list-contacts__item list-contacts__item_tel">
-                        <span class="list-contacts__subtitle">Телефон:</span>
-                        <a href="tel:+79999999999" class="list-contacts__text txt25">+7 999 999 99 99</a>
-                    </li>
-                    <li class="list-contacts__item list-contacts__item_mail">
-                        <span class="list-contacts__subtitle">Почта:</span>
-                        <a href="mailto:RealFant@gmail.ru" class="list-contacts__text txt25">RealFant@gmail.ru</a>
-                    </li>
-                    <li class="list-contacts__item list-contacts__item_address">
-                        <span class="list-contacts__subtitle">Адрес:</span>
-                        <span class="list-contacts__text txt25">Москва, м. Курская</span>
-                    </li>
-                </ul>
-                <div class="group">
-                    <a href="#" class="group__button btn">
-                        <span class="btn__text">Наши кейсы</span>
-                        <span class="btn__arrow-wrap btn__arrow-wrap">
-                            <img aria-hidden="true" src="./assets/images/icons/arr.svg" alt="" class="btn__arrow-icon">
-                        </span>
-                    </a>
+        <main>
+            <section class="project">
+    <div class="project__container container">
+        <div class="project__content">
+            <a href="#" class="project__link link link_ol">
+                <figure class="link__arrow">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.60125 19.0409L3.53125 12.9709L9.60125 6.90088" stroke="#140A3F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M20.5331 12.9707L3.70312 12.9707" stroke="#140A3F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </figure>
 
-                    <div class="group__projects">
-                        <div class="group__counter"><span>50+</span></div>
-
-                        <p class="group__title">Самое эффективное SEO с гарантией</p>
+                <span class="link__text"> Назад </span>
+            </a>
+            <div class="project__group group-project">
+                <div class="group-project__item group-project__item_name">
+                    <div class="group-project__inner">
+                        <span class="txt25">Tars</span> Портал для хакеров и разработчиков
                     </div>
+                </div>
+                <div class="group-project__item group-project__item_link">
+                    <a href="#" class="group-project__inner">
+                        <span class="group-project__text">Tars-hakers.ru</span>
+                        <div class="group-project__icon-wrap arr-icon">
+                            <img src="./assets/images/icons/arr-white.svg" alt="" class="arr-icon__icon">
+                        </div>
+                    </a>
                 </div>
             </div>
-            <form data-dev="" action="#" class="contacts__form form-contacts">
-                <div class="form-contacts__fields">
-                    <div class="form-contacts__input input">
-                        <input id="req-name" data-validate="" data-required="" autocomplete="off" type="text" name="form[]" data-error="" placeholder="Введите имя..." class="input__field">
-                        <label for="req-name" class="input__label">Имя</label>
-                    </div>
-                    <div class="form-contacts__input input">
-                        <input id="req-tel" data-tel-mask="" data-validate="" data-required="" autocomplete="off" type="tel" name="form[]" data-error="" placeholder="+7" class="input__field">
-                        <label for="req-tel" class="input__label">Телефон</label>
-                    </div>
-                    <div class="form-contacts__input input">
-                        <input id="req-email" data-validate="" data-required="" autocomplete="off" type="email" name="form[]" data-error="" placeholder="Введите почту..." class="input__field">
-                        <label for="req-email" class="input__label">Почта</label>
-                    </div>
-                    <div class="form-contacts__dropdown dropdown">
-                        <select data-validate="" data-required="" data-sel-label="Сайт" data-show-selection="" name="form[]">
-                            <option value="1">Портал</option>
-                            <option value="2">Интернет-магазин</option>
-                            <option value="3">Приложение</option>
-                            <option value="4">Брендинг</option>
-                            <option value="5">Продвижение</option>
-                            <option value="6">Лендинг</option>
-                            <option value="7">Tilda</option>
-                            <option value="8">Bitrix</option>
-                        </select>
-                    </div>
-                    <div class="form-contacts__input input input_textarea">
-                        <textarea data-validate="" data-required="" id="req-comment" name="form[]" placeholder="Расскажите подробнее о проекте" class="input__field"></textarea>
-                        <label for="req-comment" class="input__label">Комментарий</label>
-                    </div>
-                </div>
-                <button type="submit" class="form-contacts__btn btn">
-                    <span class="btn__text">Оставить заявку</span>
-                    <span class="btn__arrow-wrap btn__arrow-wrap">
-                        <img aria-hidden="true" src="./assets/images/icons/arr.svg" alt="" class="btn__arrow-icon">
-                    </span>
-                </button>
-            </form>
+            <div class="project__image-wrap">
+                <img src="./assets/images/sections/project/project.webp" alt="" class="project__image">
+            </div>
         </div>
-        <div class="contacts__bg">
-            <img src="./assets/images/sections/contacts/bg.webp" alt="" class="contacts__bg-image">
+        <div class="project__bg">
+            <img src="./assets/images/sections/project/bg.webp" alt="" class="project__bg-image">
         </div>
     </div>
 </section>
 
-            </main>
-            <footer class="footer">
+        </main>
+        <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <ul class="footer__list">
@@ -249,6 +210,7 @@
     </div>
 </footer>
 
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
