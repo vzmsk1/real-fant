@@ -1,0 +1,30 @@
+.arr-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2rem);
+    @media (max-width: 48em) {
+        flex: 0 0 6rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    // .arr-icon__icon
+
+    &__icon {
+        flex: 0 0 2.4rem;
+        width: 2.4rem;
+        object-fit: contain;
+        transform: rotate(-135deg);
+        @media (max-width: 48em) {
+            flex: 0 0 3.2rem;
+            width: 3.2rem;
+        }
+    }
+}
