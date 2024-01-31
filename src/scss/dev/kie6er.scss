@@ -64,6 +64,54 @@
     }
 }
 
+.application-page {
+    .intro__article:nth-child(2) {
+        .intro__article-link {
+            gap: 0;
+        }
+        .intro__article-link-title {
+            max-width: 100%;
+            &._mobile-only {
+                display: none;
+            }
+        }
+    }
+    .promotion__block {
+        &:nth-child(1) {
+            text-align: center;
+        }
+        &:nth-child(2) {
+            text-align: left;
+            .promotion__subtitle {
+                margin-left: 13.1rem;
+            }
+        }
+        &:nth-child(3) {
+            text-align: right;
+        }
+        &._mobile-only {
+            display: none;
+        }
+    }
+    .benefits__article-heading-title {
+        max-width: 23.6rem;
+    }
+    .benefits__article-heading {
+        align-items: center;
+    }
+    .marketing__image {
+        top: 0;
+        z-index: -1;
+    }
+    .marketing__info {
+        max-width: 73rem;
+        margin-left: 36rem;
+    }
+    .info-block__title {
+        max-width: 54rem;
+    }
+}
+
 @media (max-width: 48em) {
     .portal-page {
         .intro__article-link-title {
@@ -141,6 +189,70 @@
             &::after {
                 content: '';
             }
+        }
+    }
+    .application-page {
+        .intro__article-link {
+            padding: 11.5rem 1rem 3rem;
+        }
+        .intro__article:nth-child(2) {
+            .intro__article-link {
+                gap: 2.6rem;
+            }
+            .intro__article-link-title {
+                max-width: 100%;
+                word-break: break-all;
+
+                &._mobile-only {
+                    display: -webkit-box;
+                }
+            }
+        }
+        .promotion__block {
+            &._mobile-only {
+                display: block;
+                .promotion__title {
+                    font-size: 4rem;
+                    .promotion__title-txt {
+                        display: block;
+                        &:not(:last-child) {
+                            margin-bottom: 3rem;
+                        }
+                        &:nth-child(2) {
+                            text-align: right;
+                            margin-right: 10rem;
+                        }
+                        &:nth-child(3) {
+                            text-align: right;
+                        }
+                        &:nth-child(4) {
+                            text-align: right;
+                            margin-right: 11rem;
+                        }
+                    }
+                }
+            }
+        }
+        .promotion__list-item {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+        .benefits__article-heading-title {
+            max-width: 100%;
+        }
+        .marketing__image {
+            margin-left: -7.2rem;
+        }
+        .marketing__content {
+            gap: 6.4rem;
+        }
+        .marketing__info {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        .info-block__title {
+            max-width: 100%;
         }
     }
 }
