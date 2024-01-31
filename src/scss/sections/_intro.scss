@@ -369,12 +369,15 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                max-width: 18rem;
+                max-width: 19rem;
                 transition: 0.3s color ease;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
                 overflow: hidden;
+
+                &:not(.promo-page &) {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
 
                 @include small-tablet {
                     font-size: 2.8rem;
