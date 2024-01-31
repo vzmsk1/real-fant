@@ -213,6 +213,43 @@
         }
     }
 
+    .services-page & {
+        padding-top: 35rem;
+
+        @include small-tablet {
+            padding-top: 62rem;
+        }
+
+        .intro__title {
+            max-width: 30rem;
+            margin-bottom: 2.3rem;
+        }
+
+        .intro__description {
+            max-width: 56rem;
+            margin-bottom: 4rem;
+
+            @include small-tablet {
+                max-width: 75rem;
+                margin-bottom: 8rem;
+            }
+        }
+
+        .intro__content {
+            padding-bottom: 55.7rem;
+
+            @include small-tablet {
+                padding-bottom: 17rem;
+            }
+        }
+
+        .intro__poster-image img {
+            @include small-tablet {
+                object-position: -70rem -1rem;
+            }
+        }
+    }
+
     .container {
         display: flex;
         height: 100%;
