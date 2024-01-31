@@ -5,6 +5,7 @@
     column-gap: 2rem;
     border: 2px solid rgba(255, 255, 255, 0.78);
     border-radius: 0 4rem 4rem 4rem;
+    transition: border 0.3s ease;
 
     @media (max-width: 48em) {
         padding: 1rem 1rem 1rem 4rem;
@@ -13,10 +14,23 @@
         border-radius: 0 8rem 8rem 8rem;
     }
 
+    @media (any-hover: hover) {
+        &:hover {
+            border: 2px solid $green;
+            .btn__text {
+                color: $green;
+            }
+            .btn__arrow-wrap {
+                background-color: $green;
+            }
+        }
+    }
+
     // .btn__text
 
     &__text {
         white-space: nowrap;
+        transition: color 0.3s ease;
     }
 
     // .btn__arrow-wrap
@@ -29,22 +43,26 @@
         width: 4.4rem;
         height: 4.4rem;
         padding: 1rem;
+        border: 2px solid transparent;
         border-radius: 50%;
         background-color: $white;
+        transition:
+            background-color 0.3s ease,
+            border 0.3s ease;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            @media (max-width: 48em) {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+        }
         @media (max-width: 48em) {
             flex: 0 0 7rem;
             width: 7rem;
             height: 7rem;
-        }
-    }
-
-    // .btn__arrow-icon
-
-    &__arrow-icon {
-        width: 2.4rem;
-        object-fit: contain;
-        @media (max-width: 48em) {
-            width: 3.8rem;
         }
     }
 }
