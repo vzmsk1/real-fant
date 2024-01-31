@@ -1,0 +1,92 @@
+.services {
+    margin-top: -58rem;
+    margin-bottom: 21.4rem;
+
+    @include small-tablet {
+        margin-top: -26rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 46.9rem);
+        gap: 3.6rem;
+        place-content: center;
+        margin-left: -3rem;
+
+        @include small-tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.2rem;
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+
+        @include small-tablet {
+            border-radius: 4rem;
+        }
+
+        &:hover {
+            .services__item-title {
+                color: $green;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            padding: 4.4rem;
+
+            @include small-tablet {
+                padding: 3.6rem 3.4rem 4.6rem;
+            }
+        }
+
+        &-image {
+            @include sizes(20rem, 20rem);
+            margin-bottom: 3.6rem;
+
+            @include small-tablet {
+                @include sizes(22rem, 24rem);
+                margin-bottom: 1.6rem;
+            }
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &-title {
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3rem;
+            display: block;
+            max-width: 25.2rem;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                max-width: 100%;
+                font-size: 3.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 4.2rem;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            top: 4.4rem;
+            right: 4.4rem;
+            @include rotated-arrow;
+
+            @include small-tablet {
+                top: 1.6rem;
+                right: 1.6rem;
+            }
+        }
+    }
+}

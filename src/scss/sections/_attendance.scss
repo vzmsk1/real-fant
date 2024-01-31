@@ -1,0 +1,120 @@
+.attendance {
+    margin-bottom: 21.4rem;
+
+    &__heading {
+        align-items: flex-start;
+        margin-bottom: 8rem;
+    }
+
+    &__title {
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(37.4rem, 1fr));
+        gap: 6rem 3.6rem;
+        margin-bottom: 11.6rem;
+
+        @include small-tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4.2rem 2.1rem;
+        }
+    }
+
+    &__item {
+        border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+        animation: fadeIn ease 0.3s forwards;
+
+        @include small-tablet {
+            border-radius: 4rem;
+        }
+
+        &.--hidden {
+            display: none;
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            padding: 0 4.4rem 4.4rem 1.7rem;
+            height: 100%;
+
+            &:hover {
+                .attendance__item-title {
+                    color: $green;
+                }
+            }
+
+            @include small-tablet {
+                padding: 0 3rem 3rem;
+            }
+        }
+
+        &-image {
+            @include sizes(24rem, 24rem);
+            display: block;
+            margin: -1.4rem 0 4rem 4rem;
+
+            @include small-tablet {
+                margin: -2rem 0 4rem 0rem;
+                @include sizes(25rem, 24rem);
+            }
+        }
+
+        &-title {
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3rem;
+            display: block;
+            max-width: 22.5rem;
+            margin-top: auto;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 4.2rem;
+                max-width: 22rem;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            right: 4.4rem;
+            bottom: 4.4rem;
+            @include rotated-arrow;
+
+            @include small-tablet {
+                right: 1.6rem;
+                bottom: 1.6rem;
+            }
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        transition: 0.3s opacity ease;
+
+        &.--hidden {
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
