@@ -100,6 +100,72 @@
         }
     }
 
+    .shop-page & {
+        margin-bottom: 21rem;
+
+        @include small-tablet{
+            margin-bottom: 27rem;
+        }
+
+        .promotion__block {
+            @include small-tablet{
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(1) {
+                align-items: center;
+
+                @include small-tablet{
+                    h2 {
+                        margin-right: 0;
+                        margin-left: 5rem;
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                align-items: start;
+            }
+
+            &:nth-of-type(3) {
+                align-items: end;
+
+                @include small-tablet{
+                    h2 {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &:nth-of-type(5) {
+                @include small-tablet{
+                    text-align: start;
+                }
+            }
+        }
+
+        .promotion__content {
+            &::after {
+                content: 'real';
+                text-align: center;
+                -webkit-text-stroke-width: 0.5rem;
+                -webkit-text-stroke-color: rgba(41, 255, 127, 0.1);
+                font-size: 50rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -2.5rem;
+                top: -12rem;
+
+                @include small-tablet {
+                    top: 5rem;
+                    font-size: 21rem;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+
     &_real-fant {
         margin-bottom: 28rem;
         .promotion {

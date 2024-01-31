@@ -198,6 +198,21 @@
         }
     }
 
+    .shop-page & {
+        padding-top: 37rem;
+
+        @include small-tablet {
+            padding-top: 69rem;
+            margin-bottom: 24.5rem;
+        }
+
+        .intro__poster-image {
+            @include small-tablet {
+                bottom: 68rem;
+            }
+        }
+    }
+
     .container {
         display: flex;
         height: 100%;

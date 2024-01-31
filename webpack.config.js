@@ -140,7 +140,7 @@ module.exports = {
     },
 
     entry: {
-        index: path.resolve(__dirname, 'src/js', 'app.js')
+        main: path.resolve(__dirname, 'src/js', 'app.js')
     },
     // entry: getEntries(),
     output: {

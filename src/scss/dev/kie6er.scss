@@ -1,0 +1,258 @@
+.portal-page {
+    .intro__article-link-title {
+        max-width: 21rem;
+    }
+    .intro__article-link {
+        gap: 0;
+    }
+    .promotion__block:nth-child(1) {
+        margin-left: 22rem;
+    }
+    .promotion__block:nth-child(2) {
+        .promotion__title {
+            margin-left: 0;
+            text-align: left;
+        }
+        .promotion__subtitle {
+            margin-right: 0;
+            text-align: right;
+        }
+    }
+    .promotion__block:nth-child(3) {
+        .promotion__title {
+            margin: 0;
+            text-align: right;
+        }
+        .promotion__subtitle {
+            margin-left: 10rem;
+            text-align: left;
+        }
+    }
+    .promotion__bg-text {
+        display: none;
+    }
+    .benefits__article-heading {
+        align-items: center;
+        gap: 0;
+        .benefits__article-heading-title {
+            max-width: 25rem;
+        }
+    }
+    .marketing__info {
+        max-width: 72.6rem;
+        margin-left: 45rem;
+    }
+    .marketing__image {
+        z-index: -1;
+    }
+
+    .promotion__content {
+        .promotion__block._mobile-only {
+            display: none;
+        }
+        &::after {
+            content: 'Adam code';
+            font-family: 'Space Age';
+            font-size: 45rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30rem; /* 66.667% */
+            letter-spacing: -2.25rem;
+
+            top: -8rem;
+        }
+    }
+}
+
+.application-page {
+    .intro__article:nth-child(2) {
+        .intro__article-link {
+            gap: 0;
+        }
+        .intro__article-link-title {
+            max-width: 100%;
+            &._mobile-only {
+                display: none;
+            }
+        }
+    }
+    .promotion__block {
+        &:nth-child(1) {
+            text-align: center;
+        }
+        &:nth-child(2) {
+            text-align: left;
+            .promotion__subtitle {
+                margin-left: 13.1rem;
+            }
+        }
+        &:nth-child(3) {
+            text-align: right;
+        }
+        &._mobile-only {
+            display: none;
+        }
+    }
+    .benefits__article-heading-title {
+        max-width: 23.6rem;
+    }
+    .benefits__article-heading {
+        align-items: center;
+    }
+    .marketing__image {
+        top: 0;
+        z-index: -1;
+    }
+    .marketing__info {
+        max-width: 73rem;
+        margin-left: 36rem;
+    }
+    .info-block__title {
+        max-width: 54rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .portal-page {
+        .intro__article-link-title {
+            max-width: 100%;
+            word-break: break-all;
+            overflow: visible;
+            font-size: 2.7rem;
+        }
+        .intro__article-link {
+            gap: 2.6rem;
+            padding: 11.5rem 2rem 3rem;
+        }
+        .benefits__article-heading {
+            align-items: center;
+            gap: 0;
+            .benefits__article-heading-title {
+                max-width: 100%;
+            }
+        }
+        .marketing__info {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        .marketing__image {
+            margin-left: -15rem;
+        }
+        .marketing__content {
+            gap: 8rem;
+        }
+        .promotion__block {
+            .promotion__title-txt {
+                font-size: 4.5rem;
+                line-height: 120%;
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                &:nth-child(1) {
+                    text-align: center;
+                }
+                &:nth-child(3) {
+                    text-align: right;
+                }
+            }
+        }
+
+        .promotion__list {
+            &-item:not(:last-child) {
+                margin-bottom: 2.8rem;
+            }
+        }
+        .promotion__bg-text {
+            display: flex;
+            width: 100%;
+            left: 0;
+            gap: 0;
+            top: -12rem;
+            .bg-text__content {
+                gap: 8rem;
+                span {
+                    &:nth-child(1) {
+                        align-self: flex-start;
+                        transform: none;
+                    }
+                    &:nth-child(2) {
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        .promotion__content {
+            .promotion__block._mobile-only {
+                display: flex;
+            }
+            &::after {
+                content: '';
+            }
+        }
+    }
+    .application-page {
+        .intro__article-link {
+            padding: 11.5rem 1rem 3rem;
+        }
+        .intro__article:nth-child(2) {
+            .intro__article-link {
+                gap: 2.6rem;
+            }
+            .intro__article-link-title {
+                max-width: 100%;
+                word-break: break-all;
+
+                &._mobile-only {
+                    display: -webkit-box;
+                }
+            }
+        }
+        .promotion__block {
+            &._mobile-only {
+                display: block;
+                .promotion__title {
+                    font-size: 4rem;
+                    .promotion__title-txt {
+                        display: block;
+                        &:not(:last-child) {
+                            margin-bottom: 3rem;
+                        }
+                        &:nth-child(2) {
+                            text-align: right;
+                            margin-right: 10rem;
+                        }
+                        &:nth-child(3) {
+                            text-align: right;
+                        }
+                        &:nth-child(4) {
+                            text-align: right;
+                            margin-right: 11rem;
+                        }
+                    }
+                }
+            }
+        }
+        .promotion__list-item {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+        .benefits__article-heading-title {
+            max-width: 100%;
+        }
+        .marketing__image {
+            margin-left: -7.2rem;
+        }
+        .marketing__content {
+            gap: 6.4rem;
+        }
+        .marketing__info {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        .info-block__title {
+            max-width: 100%;
+        }
+    }
+}
