@@ -31,7 +31,7 @@
                             <a href="#" class="header__nav-item-link"> Сайты </a>
                         </li>
                         <li class="header__nav-item">
-                            <div class="header__nav-item-heading">
+                            <div class="header__nav-item-heading --active">
                                 <a href="#" class="header__nav-item-link"> Услуги </a>
 
                                 <figure class="header__nav-item-icon">
@@ -144,7 +144,7 @@
 
             <div class="intro__articles">
                 <article class="intro__article">
-                    <a href="#" class="intro__article-link">
+                    <div class="intro__article-link">
                         <span class="intro__article-link-title">
                             Внедрение профессиона <br>
                             льной системы
@@ -154,13 +154,11 @@
                             <img src="./assets/images/sections/intro/intro-article-image-10.webp" alt="">
                         </figure>
 
-                        <figure class="intro__article-link-icon">
-                            <img src="./assets/images/icons/arrow-rotated.svg" alt="">
-                        </figure>
-                    </a>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 1 </span>
+                    </div>
                 </article>
                 <article class="intro__article">
-                    <a href="#" class="intro__article-link">
+                    <div class="intro__article-link">
                         <span class="intro__article-link-title">
                             Исследования <br>
                             в области
@@ -170,13 +168,11 @@
                             <img src="./assets/images/sections/intro/intro-article-image-11.webp" alt="">
                         </figure>
 
-                        <figure class="intro__article-link-icon">
-                            <img src="./assets/images/icons/arrow-rotated.svg" alt="">
-                        </figure>
-                    </a>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 2 </span>
+                    </div>
                 </article>
                 <article class="intro__article">
-                    <a href="#" class="intro__article-link">
+                    <div class="intro__article-link">
                         <span class="intro__article-link-title">
                             Адаптация <br>
                             к конкретному <br>
@@ -187,10 +183,8 @@
                             <img src="./assets/images/sections/intro/intro-article-image-12.webp" alt="">
                         </figure>
 
-                        <figure class="intro__article-link-icon">
-                            <img src="./assets/images/icons/arrow-rotated.svg" alt="">
-                        </figure>
-                    </a>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 3 </span>
+                    </div>
                 </article>
             </div>
         </div>
@@ -200,41 +194,10 @@
                 <section class="promotion">
     <div class="container">
         <div class="promotion__content">
-            <div class="_desktop-only">
-                <div class="promotion__block">
-                    <span class="promotion__title title">проводим</span>
-                </div>
-
-                <div class="promotion__block">
-                    <h2 class="promotion__title title">исследования</h2>
-
-                    <span class="promotion__subtitle">Вникаем во внутренние процессы компании-клиента</span>
-                </div>
-
-                <div class="promotion__block">
-                    <h2 class="promotion__title title">в вашей области</h2>
-
-                    <span class="promotion__subtitle">Решаем проблемы потребителям и оптимизируем бизнес-процессы</span>
-                </div>
-            </div>
-
-            <div class="_mobile-only">
-                <div class="promotion__block">
-                    <h2 class="promotion__title title">проводим</h2>
-                </div>
-                <div class="promotion__block">
-                    <h2 class="promotion__title title">иccледования</h2>
-                </div>
-                <div class="promotion__block">
-                    <h2 class="promotion__title title">в области</h2>
-                </div>
-                <div class="promotion__block">
-                    <span class="promotion__subtitle">Вникаем во внутренние процессы <br> компании-клиента</span>
-                </div>
-                <div class="promotion__block">
-                    <span class="promotion__subtitle">Решаем проблемы потребителям и оптимизируем бизнес-процессы</span>
-                </div>
-            </div>
+            <figure class="promotion__image">
+                <img src="./assets/images/sections/promotion/promotion-shop.svg" alt="" class="_desktop-only">
+                <img src="./assets/images/sections/promotion/promotion-shop-mobile.svg" alt="" class="_mobile-only">
+            </figure>
         </div>
     </div>
 </section>

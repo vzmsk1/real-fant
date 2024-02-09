@@ -116,6 +116,11 @@
             padding-left: 7rem;
             row-gap: 1rem;
         }
+        &:hover{
+            a {
+                color: $green;
+            }
+        }
 
         // .list-contacts__item_tel
 
@@ -157,6 +162,7 @@
 
     &__text {
         position: relative;
+        transition: .3s color ease;
         &::before {
             content: '';
             position: absolute;

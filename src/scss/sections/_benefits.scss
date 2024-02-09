@@ -17,6 +17,17 @@
         margin-bottom: 28.7rem;
     }
 
+    .promo-page & {
+        .benefits__article-poster-image {
+            max-width: 25rem;
+            height: 24rem;
+        }
+
+        .benefits__article-description {
+            max-width: 29.9rem;
+        }
+    }
+
     @include small-tablet {
         margin-bottom: 26rem;
     }
@@ -59,9 +70,16 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                display: block;
-                max-width: 22.6rem;
+                max-width: 21.6rem;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    color: $white;
+                }
 
                 @include small-tablet {
                     max-width: 100%;
@@ -88,7 +106,6 @@
             height: 21.9rem;
             position: relative;
             margin-bottom: 3rem;
-            margin-top: auto;
 
             @include small-tablet {
                 margin-bottom: 2rem;

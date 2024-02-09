@@ -2,16 +2,17 @@
     padding: 0.6rem 0.6rem 0.6rem 2rem;
     display: flex;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 3rem;
     border: 2px solid rgba(255, 255, 255, 0.78);
     border-radius: 0 4rem 4rem 4rem;
     transition: border 0.3s ease;
 
     @media (max-width: 48em) {
-        padding: 1rem 1rem 1rem 4rem;
+        padding: 1rem 0.8rem 1rem 3rem;
         column-gap: 3.2rem;
         border: 0.4rem solid rgba(255, 255, 255, 0.78);
         border-radius: 0 8rem 8rem 8rem;
+        height: 9rem;
     }
 
     @media (any-hover: hover) {
@@ -31,6 +32,10 @@
     &__text {
         white-space: nowrap;
         transition: color 0.3s ease;
+
+        @include small-tablet{
+            font-size: 2.67rem;
+        }
     }
 
     // .btn__arrow-wrap

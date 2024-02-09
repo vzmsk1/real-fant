@@ -2,11 +2,50 @@
     position: relative;
     margin-top: -8rem;
     margin-bottom: 10.5rem;
-    padding-top: 40rem;
+    padding-top: 37rem;
 
     @include small-tablet {
         margin-bottom: 15.5rem;
-        padding-top: 68rem;
+        padding-top: 69rem;
+    }
+
+    .portal-page & {
+        margin-bottom: 2.5rem;
+
+        @include small-tablet{
+            padding-top: 74rem;
+            margin-bottom: 16.5rem;
+        }
+    }
+
+    .home-page & {
+       .intro__content {
+          @media (min-width: 48em) {
+              &::after{
+                  @include pseudo{
+                      background: url(./assets/images/icons/heart.svg) no-repeat center;
+                      width: 3rem;
+                      height: 2.2rem;
+                      right: 73.2rem;
+                      z-index: 10;
+                      top: 11rem;
+                      background-size: cover;
+                  }
+              }
+
+              &::before{
+                  @include pseudo{
+                      background: url(./assets/images/icons/heart.svg) no-repeat center;
+                      width: 3rem;
+                      height: 2.2rem;
+                      right: 59rem;
+                      z-index: 10;
+                      top: 1rem;
+                      background-size: cover;
+                  }
+              }
+          }
+       }
     }
 
     .publications-page & {
@@ -178,7 +217,7 @@
 
     .sites-page & {
         padding-top: 37rem;
-        margin-bottom: 24.5rem;
+        margin-bottom: 11.5rem;
 
         @include small-tablet {
             padding-top: 69rem;
@@ -276,6 +315,7 @@
     &__content {
         margin-top: auto;
         padding-bottom: 11.7rem;
+        position: relative;
     }
 
     &__title {
