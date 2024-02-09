@@ -182,7 +182,7 @@
                 &-title {
                     font-size: 2.5rem;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 100;
                     line-height: normal;
                     transition: 0.3s color ease;
                     display: block;
@@ -192,7 +192,7 @@
                         text-align: center;
                         font-size: 2.8rem;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 100;
                         line-height: normal;
                         white-space: initial;
                     }
@@ -444,7 +444,7 @@
             &-title {
                 font-size: 2.5rem;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 100;
                 line-height: normal;
                 max-width: 19rem;
                 transition: 0.3s color ease;
@@ -459,7 +459,7 @@
                 @include small-tablet {
                     font-size: 2.8rem;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 100;
                     line-height: normal;
                     text-align: center;
                     max-width: 100%;
