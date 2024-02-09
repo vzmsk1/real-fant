@@ -2,10 +2,28 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Pagination, EffectFade } from 'swiper/modules';
 import Inputmask from 'inputmask';
+import AOS from 'aos';
 
 // --------------------------------------------------------------------------
 
+AOS.init({
+    once: true,
+    duration: 700
+});
+
+console.log(AOS);
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        AOS.refresh();
+    }, 500);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
+    // setTimeout(() => {
+    //     AOS.refresh();
+    // }, 500);
+
     const dragElement = () => {
         if (document.querySelectorAll('[data-draggable]').length) {
             document.querySelectorAll('[data-draggable]').forEach((el) => {});
