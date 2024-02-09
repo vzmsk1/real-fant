@@ -12,15 +12,29 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        position: relative;
 
         @include small-tablet {
             justify-content: initial;
             gap: 16rem;
             transition: 0.3s gap ease;
 
+            &::after{
+                @include pseudo {
+                    inset: 0;
+                    background: $bgColor;
+                    left: 0;
+                    width: calc(100% - 6.4rem);
+                    opacity: 0;
+                    top: -5rem;
+                    height: 15rem;
+                }
+            }
+
             ._menu-opened & {
                 &::after {
                     opacity: 1;
+                    transition: .1s opacity ease .3s;
                 }
 
                 gap: 11.6rem;
@@ -68,6 +82,7 @@
                 opacity 0.3s ease;
             background: $bgColor;
             padding: 21.4rem 5.2rem 8.8rem 7.8rem;
+            overflow-x: scroll;
 
             ._menu-opened & {
                 opacity: 1;
@@ -82,7 +97,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: auto;
+                margin-top: 13.5rem;
                 margin-right: 4rem;
 
                 &-item {
@@ -141,11 +156,6 @@
     }
 
     &__nav {
-        @include small-tablet {
-            max-height: 101rem;
-            overflow-x: auto;
-            height: 100%;
-        }
 
         &-list {
             display: flex;
@@ -164,7 +174,7 @@
                 width: 100%;
 
                 &.--active {
-                    a {
+                    .header__nav-item-link {
                         color: $green;
                     }
                 }
@@ -180,7 +190,7 @@
 
                     &.--active {
                         .header__nav-item-icon {
-                            transform: rotate(-180deg);
+                            transform: rotate(0deg);
                         }
 
                         ~ .header__nav-item-dropdown {
@@ -204,6 +214,7 @@
                 @include small-tablet {
                     display: block;
                     transition: 0.3s transform ease;
+                    transform: rotate(-180deg);
                 }
             }
 
@@ -234,6 +245,13 @@
 
                         &:not(:first-child) {
                             margin-top: 5rem;
+                        }
+
+                        .header__nav-item-link {
+                            @include small-tablet{
+                                color: $white !important;
+                                font-weight: 100;
+                            }
                         }
                     }
                 }

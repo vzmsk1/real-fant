@@ -5,6 +5,7 @@ const menuInit = () => {
         const hamburger = document.querySelector('.hamburger');
 
         hamburger.addEventListener('click', function (e) {
+
             if (bodyLockStatus) {
                 document.documentElement.classList.toggle('_menu-opened');
                 bodyLockToggle();

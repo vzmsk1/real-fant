@@ -43,10 +43,12 @@
             border-radius: 3rem;
             background: rgba(255, 255, 255, 0.1);
             padding: 2.2rem;
+            position: relative;
 
             @include small-tablet {
                 gap: 2.6rem;
                 padding: 2rem;
+                min-height: 45rem;
             }
 
             &:hover {
@@ -123,6 +125,9 @@
             @include small-tablet {
                 padding: 0.6rem;
                 @include sizes(5.2rem, 5.2rem);
+                position: absolute;
+                right: 2.2rem;
+                bottom: 1.2rem;
             }
         }
     }

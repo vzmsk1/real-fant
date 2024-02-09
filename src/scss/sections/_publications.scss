@@ -39,6 +39,7 @@
         &:hover {
             .publications__item-details {
                 color: $green;
+                opacity: 1;
             }
         }
 
@@ -94,7 +95,13 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            transition: 0.3s color ease;
+            transition: 0.3s color ease, .3s opacity ease;
+            opacity: .5;
+
+            &:hover{
+                color: $green;
+                opacity: 1;
+            }
 
             @include small-tablet {
                 font-size: 2rem;

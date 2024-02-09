@@ -45,23 +45,6 @@
     .marketing__image {
         z-index: -1;
     }
-
-    .promotion__content {
-        .promotion__block._mobile-only {
-            display: none;
-        }
-        &::after {
-            content: 'Adam code';
-            font-family: 'Space Age';
-            font-size: 45rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 30rem; /* 66.667% */
-            letter-spacing: -2.25rem;
-
-            top: -8rem;
-        }
-    }
 }
 
 .application-page {
@@ -182,14 +165,6 @@
             }
         }
 
-        .promotion__content {
-            .promotion__block._mobile-only {
-                display: flex;
-            }
-            &::after {
-                content: '';
-            }
-        }
     }
     .application-page {
         .intro__article-link {
