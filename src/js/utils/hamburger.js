@@ -10,6 +10,8 @@ const menuInit = () => {
                 document.documentElement.classList.toggle('_menu-opened');
                 bodyLockToggle();
             }
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     }
 };
