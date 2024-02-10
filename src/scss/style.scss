@@ -36,7 +36,12 @@ html.lock body {
     overflow: hidden;
     touch-action: none;
 }
-html {
+html,
+body {
+    //overflow-x: hidden;
+}
+
+body {
     overflow-x: hidden;
 }
 
