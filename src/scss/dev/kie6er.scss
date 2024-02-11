@@ -111,8 +111,11 @@
             align-items: center;
             gap: 0;
             .benefits__article-heading-title {
-                max-width: 100%;
+                max-width: 23rem;
             }
+        }
+        .benefits__article-poster-image {
+            max-width: 20rem;
         }
         .marketing__info {
             max-width: 100%;

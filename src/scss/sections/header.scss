@@ -34,6 +34,8 @@
             ._menu-opened & {
                 &::after {
                     opacity: 1;
+                    -webkit-transition: .1s opacity ease .3s;
+                    -o-transition: .1s opacity ease .3s;
                     transition: .1s opacity ease .3s;
                 }
 
