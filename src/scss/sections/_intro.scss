@@ -115,10 +115,10 @@
     }
 
     .landing-page & {
-        padding-top: 48rem;
+        padding-top: 53rem;
 
         @include small-tablet {
-            padding-top: 74rem;
+            padding-top: 80rem;
         }
     }
 
@@ -273,11 +273,11 @@
     }
 
     .shop-page & {
-        padding-top: 37rem;
+        padding-top: 43rem;
 
         @include small-tablet {
-            padding-top: 69rem;
-            margin-bottom: 24.5rem;
+            padding-top: 75rem;
+            margin-bottom: 15.5rem;
         }
 
         .intro__poster-image {
@@ -321,6 +321,15 @@
             @include small-tablet {
                 object-position: -70rem -1rem;
             }
+        }
+    }
+
+    .services-template-page & {
+        padding-top: 44rem;
+        margin-bottom: 11rem;
+
+        @include small-tablet{
+            padding-top: 77rem;
         }
     }
 

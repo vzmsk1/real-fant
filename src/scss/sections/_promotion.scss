@@ -17,6 +17,12 @@
         }
     }
 
+    .shop-page & {
+        @include small-tablet{
+            margin-bottom: 28rem;
+        }
+    }
+
     //.landing-page & {
     //    margin-bottom: 22rem;
     //}

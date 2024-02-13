@@ -10,6 +10,10 @@
 
         @include small-tablet {
             margin-bottom: 15.7rem;
+
+            .benefits__article-heading-title {
+                max-width: 23rem;
+            }
         }
     }
 
@@ -26,7 +30,27 @@
     }
 
     .shop-page & {
-        margin-bottom: 28.7rem;
+        margin-bottom: 31.7rem;
+
+        @include small-tablet{
+            margin-bottom: 28.7rem;
+        }
+
+        .benefits__article {
+            padding-bottom: 2rem;
+
+            @include small-tablet{
+                padding-bottom: 4rem;
+            }
+        }
+
+        .benefits__article-heading {
+            margin-bottom: 3rem;
+        }
+
+        .benefits__article-heading-title {
+            max-width: 22.6rem;
+        }
     }
 
     .promo-page & {
@@ -38,6 +62,14 @@
         .benefits__article-description {
             max-width: 29.9rem;
         }
+    }
+
+    .services-template-page & {
+        .benefits__article-heading .benefits__article-heading-title {
+            max-width: 21rem;
+        }
+
+        margin-bottom: 27.7rem;
     }
 
     &__content {
