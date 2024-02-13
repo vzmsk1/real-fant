@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="./assets/images/icons/favicon.png">
         <title>Продвижение</title>
-    <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+    <script defer src="main.js"></script></head>
     <body>
         <div class="wrapper promo-page">
             <header class="header">
@@ -127,13 +127,14 @@
             <main>
                 <section class="intro">
     <figure class="intro__poster-image intro__poster-image_has-backdrop">
-        <img src="./assets/images/sections/intro/intro-main-promo.webp" alt="">
+        <img class="_desktop-only" src="./assets/images/sections/intro/intro-main-promo.webp" alt="">
+        <img class="_mobile-only" src="./assets/images/sections/intro/intro-main-promo-mobile.webp" alt="">
     </figure>
 
     <div class="container">
         <div class="intro__content">
             <span class="intro__title title">
-                Выводим в <span>ТОП-3</span> всего за 1 неделю
+                <span>Выводим</span> <span class="txt-green"> в ТОП-3</span> всего за 1 неделю
             </span>
 
             <div class="intro__group group">
@@ -152,22 +153,24 @@
                     <div class="group__counter"><span>50+</span></div>
 
                     <p class="group__title _desktop-only">Самое эффективное SEO с гарантией результата</p>
-                    <p class="group__title _mobile-only">SEO с гарантией результата</p>
+                    <p class="group__title _mobile-only">
+                        SEO <br>
+                        с гарантией результата
+                    </p>
                 </div>
             </div>
 
             <div class="intro__articles">
                 <article class="intro__article">
                     <div class="intro__article-link">
-                        <span class="intro__article-link-title">Результат начиная с первого дня</span>
+                        <span class="intro__article-link-title">Результат начиная <br>
+                            с первого дня</span>
 
                         <figure class="intro__article-link-image">
                             <img src="./assets/images/sections/intro/intro-article-image-4.webp" alt="">
                         </figure>
 
-                        <span class="intro__article-link-icon intro__article-link-icon_has-number">
-                            1
-                        </span>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 1 </span>
                     </div>
                 </article>
                 <article class="intro__article">
@@ -179,9 +182,7 @@
                             <img src="./assets/images/sections/intro/intro-article-image-5.webp" alt="">
                         </figure>
 
-                        <span class="intro__article-link-icon intro__article-link-icon_has-number">
-                            2
-                        </span>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 2 </span>
                     </div>
                 </article>
                 <article class="intro__article">
@@ -195,9 +196,7 @@
                             <img src="./assets/images/sections/intro/intro-article-image-6.webp" alt="">
                         </figure>
 
-                        <span class="intro__article-link-icon intro__article-link-icon_has-number">
-                            3
-                        </span>
+                        <span class="intro__article-link-icon intro__article-link-icon_has-number"> 3 </span>
                     </div>
                 </article>
             </div>

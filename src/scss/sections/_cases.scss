@@ -1,8 +1,116 @@
 .cases {
     margin-bottom: 20rem;
 
-    @include small-tablet{
+    @include small-tablet {
         overflow-x: hidden;
+    }
+
+    .promo-page & {
+        margin-top: -11.3rem;
+        margin-bottom: 25rem;
+
+        @media (max-width: 48em) {
+            margin-top: 16rem;
+        }
+
+        .group {
+            padding-top: 1rem;
+            gap: 4.4rem;
+        }
+        .section-head__title {
+            transform: translateY(-1rem);
+        }
+        .group__projects {
+            transform: translateX(-0.3rem);
+            @media (max-width: 48em) {
+                transform: translate(0rem, -0.3rem);
+            }
+        }
+        .cases__btn {
+            transform: translateX(0.2rem);
+
+            @media (max-width: 48em) {
+                transform: translateX(-0.5rem);
+            }
+        }
+        .cases__head {
+            margin-bottom: 4.8rem;
+
+            @media (max-width: 48em) {
+                gap: 4rem;
+            }
+        }
+        .slide-cases {
+            padding: 1.9rem 2.2rem 4rem 2.2rem;
+        }
+        .slide-cases__image-wrap {
+            margin-bottom: 3.2rem;
+        }
+        .slide-cases__title {
+            margin-bottom: 0.91rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .bullets {
+            column-gap: 2rem;
+        }
+        .bullets .swiper-pagination-bullet {
+            @media (min-width: 48em) {
+                flex: 0 0 4.5rem;
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+        }
+        .cases__bullets {
+            bottom: 2.5rem;
+        }
+        .cases__carousel {
+            margin-bottom: 6rem;
+        }
+        .btn__arrow-wrap {
+            @media (max-width: 48em) {
+                flex: 0 0 6.8rem;
+                width: 6.8rem;
+                height: 6.8rem;
+            }
+        }
+        .slide-cases__image {
+            @media (max-width: 48em) {
+                height: 77rem;
+            }
+        }
+        .slide-cases__image-wrap {
+            @media (max-width: 48em) {
+                margin-bottom: 12.8rem;
+                height: 82rem;
+                transform: translateX(-2rem);
+            }
+        }
+        .slide-cases__content::after {
+            left: 0;
+            width: 100%;
+            top: -4.5rem;
+        }
+        .slide-cases__content {
+            @media (max-width: 48em) {
+                margin-top: -9rem;
+                transform: translateX(-2rem);
+                width: 107%;
+                padding: 3.4rem 3rem 4.2rem 2.6rem;
+            }
+        }
+        .slide-cases__subtitle {
+            @media (max-width: 48em) {
+                font-size: 2.6rem;
+            }
+        }
+        .cases__slider {
+            @media (max-width: 48em) {
+                margin-bottom: 2.1rem;
+            }
+        }
     }
 
     // .cases__container

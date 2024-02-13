@@ -4,6 +4,25 @@
         margin-bottom: 25rem;
     }
 
+    .promo-page & {
+        .info-block__image-wrap {
+            margin-bottom: 1.6rem;
+            width: 65.3rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 2rem;
+                width: 55.3rem;
+            }
+        }
+        .info-block__title {
+            margin-bottom: 6.6rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
     // .info-block__container
 
     &__container {
