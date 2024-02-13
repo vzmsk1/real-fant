@@ -1,5 +1,5 @@
 .publications {
-    margin-top: -96rem;
+    margin-top: -90rem;
     margin-bottom: 18.6rem;
 
     .article-page & {
@@ -7,7 +7,7 @@
     }
 
     @include small-tablet {
-        margin-top: -29rem;
+        margin-top: -22rem;
     }
 
     &__list {
@@ -33,7 +33,7 @@
 
         @include small-tablet {
             border-radius: 3rem;
-            padding: 29rem 3.2rem 3rem;
+            padding: 29rem 3.2rem 4rem;
         }
 
         &:hover {
@@ -80,6 +80,7 @@
                 font-style: normal;
                 font-weight: 100;
                 line-height: 3rem;
+                margin-bottom: 2.8rem;
             }
         }
 
@@ -95,10 +96,12 @@
             font-style: normal;
             font-weight: 100;
             line-height: normal;
-            transition: 0.3s color ease, .3s opacity ease;
-            opacity: .5;
+            transition:
+                0.3s color ease,
+                0.3s opacity ease;
+            opacity: 0.5;
 
-            &:hover{
+            &:hover {
                 color: $green;
                 opacity: 1;
             }
@@ -112,7 +115,8 @@
         }
 
         &-icon {
-            @include rotated-arrow;
+            @include rotated-arrow {
+            }
         }
     }
 }
