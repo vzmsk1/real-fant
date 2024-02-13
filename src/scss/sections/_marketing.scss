@@ -46,6 +46,8 @@
     }
 
     .shop-page & {
+        margin-bottom: 35rem;
+
         .marketing__image {
             @include small-tablet {
                 transform: translateX(-8rem);
@@ -79,6 +81,10 @@
 
         .marketing__title {
             margin-bottom: 3.8rem;
+
+            @include small-tablet{
+                margin-bottom: 1.8rem;
+            }
         }
     }
 
@@ -184,6 +190,34 @@
             @media (max-width: 48em) {
                 width: 0.7rem;
                 height: 0.7rem;
+            }
+        }
+    }
+
+    .landing-page & {
+        margin-bottom: 31rem;
+
+        @include small-tablet{
+            margin-bottom: 26rem;
+        }
+
+        @include small-tablet{
+            .marketing__image {
+                margin-bottom: 8rem;
+            }
+        }
+    }
+
+    .services-template-page & {
+        .marketing__title {
+            margin-bottom: 7.8rem;
+        }
+
+        .marketing__info {
+            margin-left: 43rem;
+
+            @include small-tablet{
+                margin-left: 0;
             }
         }
     }

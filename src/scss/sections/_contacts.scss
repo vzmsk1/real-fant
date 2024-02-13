@@ -1,9 +1,10 @@
 .contacts {
     position: relative;
     margin-bottom: 21.4rem;
-    padding-top: 35rem;
+    padding-top: 33rem;
     @media (max-width: 48em) {
-        padding-top: 55.4rem;
+        padding-top: 61.4rem;
+        margin-top: -10rem;
     }
 
     // .contacts__container
@@ -48,7 +49,7 @@
         margin-bottom: 10.1rem;
         max-width: 87rem;
         @media (max-width: 48em) {
-            margin-bottom: 8rem;
+            margin-bottom: 5rem;
             max-width: 68rem;
             order: 1;
         }
@@ -102,7 +103,7 @@
     flex-direction: column;
     row-gap: 5.3rem;
     @media (max-width: 48em) {
-        row-gap: 2.8rem;
+        row-gap: 2rem;
     }
 
     // .list-contacts__item
@@ -194,7 +195,7 @@
         flex-direction: column;
         row-gap: 1.1rem;
         @media (max-width: 48em) {
-            margin-bottom: 8rem;
+            margin-bottom: 6rem;
             row-gap: 2.8rem;
         }
     }
