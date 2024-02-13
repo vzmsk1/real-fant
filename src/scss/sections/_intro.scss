@@ -1,11 +1,12 @@
 .intro {
     position: relative;
-    margin-top: -8rem;
+    margin-top: -14rem;
     margin-bottom: 10.5rem;
     padding-top: 37rem;
 
     @include small-tablet {
         margin-bottom: 15.5rem;
+        margin-top: 0;
         padding-top: 69rem;
     }
 
@@ -19,6 +20,12 @@
     }
 
     .home-page & {
+        .intro__title {
+            @include small-tablet{
+                margin-bottom: 8.3rem;
+            }
+        }
+
        .intro__content {
           @media (min-width: 48em) {
               &::after{
@@ -46,6 +53,24 @@
               }
           }
        }
+
+        @include small-tablet{
+            padding-top: 72rem;
+
+            .group__button {
+                height: 9.5rem;
+            }
+
+            .intro__articles {
+                margin-top: 19rem;
+            }
+
+            .intro__poster-image {
+                img {
+                    object-position: -152rem;
+                }
+            }
+        }
     }
 
     .publications-page & {
@@ -295,7 +320,7 @@
     }
 
     @include small-tablet {
-        margin-top: -16rem;
+        margin-top: -22rem;
         &::after {
             background: linear-gradient(0deg, #101653 13%, rgba(23, 15, 67, 0) 75.45%);
         }
@@ -476,7 +501,7 @@
                     position: absolute;
                     @include sizes(16.2rem, 16.2rem);
                     flex: 0 0 16.2rem;
-                    top: 0;
+                    top: 2rem;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
