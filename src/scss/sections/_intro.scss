@@ -9,43 +9,158 @@
         padding-top: 69rem;
     }
 
+    .promo-page & {
+        padding-top: 38.2rem;
+        &::after {
+            inset: unset;
+            @media (max-width: 48em) {
+                inset: 0;
+                bottom: 54.5rem;
+            }
+        }
+        @media (max-width: 48em) {
+            padding-top: 68.2rem;
+        }
+        .intro__poster-image {
+            img {
+                height: 89%;
+            }
+
+            @media (max-width: 48em) {
+                top: -4.3rem;
+                left: -3.5rem;
+
+                img {
+                    height: 63%;
+                }
+            }
+        }
+        .group__counter span {
+            font-size: 1.65rem;
+
+            @media (max-width: 48em) {
+                font-size: 2.5rem;
+            }
+        }
+        .group__title {
+            line-height: 128%;
+
+            @media (max-width: 48em) {
+                line-height: 117%;
+                font-size: 2.7rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        .intro__title {
+            margin-bottom: 6.2rem;
+            max-width: 125rem;
+
+            line-height: 100.3%;
+            word-spacing: 1.9rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 7rem;
+            }
+        }
+        .title {
+            word-spacing: 1.8rem;
+            line-height: 99%;
+
+            .txt-green {
+                word-spacing: 1.8rem;
+                color: $green;
+
+                @media (max-width: 48em) {
+                    color: $white;
+                }
+            }
+
+            @media (max-width: 48em) {
+                word-spacing: 0rem;
+                line-height: 102%;
+                font-size: 5.7rem;
+                span:first-child {
+                    margin-right: auto;
+                    display: block;
+                }
+                .txt-green {
+                    word-spacing: 0rem;
+                }
+            }
+        }
+        .btn {
+            padding: 0.3rem 0.6rem 0.6rem 2rem;
+
+            @media (max-width: 48em) {
+                padding: 0.4rem 0.6rem 0.6rem 3rem;
+                column-gap: 3.4rem;
+            }
+        }
+        .btn__arrow-wrap svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            flex: 0 0 2.5rem;
+        }
+        .intro__article-link-icon {
+            transform: translate(-0.1rem, 0.1rem);
+        }
+        .intro__articles {
+            margin-top: 6rem;
+        }
+        .intro__article-link-image {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                opacity: 0.1;
+            }
+        }
+    }
+
     .portal-page & {
         margin-bottom: 2.5rem;
 
-        @include small-tablet{
+        @include small-tablet {
             padding-top: 74rem;
             margin-bottom: 16.5rem;
         }
     }
 
     .home-page & {
-       .intro__content {
-          @media (min-width: 48em) {
-              &::after{
-                  @include pseudo{
-                      background: url(./assets/images/icons/heart.svg) no-repeat center;
-                      width: 3rem;
-                      height: 2.2rem;
-                      right: 73.2rem;
-                      z-index: 10;
-                      top: 11rem;
-                      background-size: cover;
-                  }
-              }
+        .intro__content {
+            @media (min-width: 48em) {
+                &::after {
+                    @include pseudo {
+                        background: url(./assets/images/icons/heart.svg) no-repeat center;
+                        width: 3rem;
+                        height: 2.2rem;
+                        right: 73.2rem;
+                        z-index: 10;
+                        top: 11rem;
+                        background-size: cover;
+                    }
+                }
 
-              &::before{
-                  @include pseudo{
-                      background: url(./assets/images/icons/heart.svg) no-repeat center;
-                      width: 3rem;
-                      height: 2.2rem;
-                      right: 59rem;
-                      z-index: 10;
-                      top: 1rem;
-                      background-size: cover;
-                  }
-              }
-          }
-       }
+                &::before {
+                    @include pseudo {
+                        background: url(./assets/images/icons/heart.svg) no-repeat center;
+                        width: 3rem;
+                        height: 2.2rem;
+                        right: 59rem;
+                        z-index: 10;
+                        top: 1rem;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
     }
 
     .publications-page & {
