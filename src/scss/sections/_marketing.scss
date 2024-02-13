@@ -22,16 +22,60 @@
     }
 
     .sites-page & {
+        @media (max-width: 48em) {
+            margin-bottom: 19rem;
+        }
         .marketing__image {
-            top: -5rem;
+            top: -6rem;
+            left: -16rem;
+
+            img {
+                width: 101%;
+            }
+
+            @media (max-width: 48em) {
+                margin-bottom: 4.3rem;
+                width: 77rem;
+                max-width: none;
+                transform: translateX(-2rem);
+            }
         }
 
-        .marketing__title {
-            max-width: 20rem;
-            margin-bottom: 6rem;
+        .marketing__info-list {
+            @media (max-width: 48em) {
+                padding-left: 1rem;
+            }
+        }
+
+        .marketing__info-item {
+            @media (max-width: 48em) {
+                font-size: 2.6rem;
+
+                &::after {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                }
+            }
+        }
+
+        .marketing__group {
+            @media (max-width: 48em) {
+                display: none;
+            }
+        }
+
+        .group__button {
+            width: 22.2rem;
+            justify-content: space-between;
+        }
+
+        .group__counter span {
+            margin-top: 1.2rem;
         }
 
         .marketing__info {
+            line-height: 151%;
+
             &-row {
                 margin-bottom: 7rem;
             }
@@ -41,6 +85,17 @@
 
             @include small-tablet {
                 margin-left: 0;
+            }
+        }
+
+        .marketing__title {
+            max-width: 20rem;
+            margin-bottom: 7.3rem;
+            line-height: 104%;
+
+            @media (max-width: 48em) {
+                max-width: none;
+                margin-bottom: 4rem;
             }
         }
     }
@@ -82,7 +137,7 @@
         .marketing__title {
             margin-bottom: 3.8rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-bottom: 1.8rem;
             }
         }
@@ -197,11 +252,11 @@
     .landing-page & {
         margin-bottom: 31rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 26rem;
         }
 
-        @include small-tablet{
+        @include small-tablet {
             .marketing__image {
                 margin-bottom: 8rem;
             }
@@ -216,7 +271,7 @@
         .marketing__info {
             margin-left: 43rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-left: 0;
             }
         }
@@ -327,11 +382,6 @@
         .sites-page & {
             .marketing__image {
                 top: -5rem;
-            }
-
-            .marketing__title {
-                max-width: 20rem;
-                margin-bottom: 6rem;
             }
 
             .marketing__info {
