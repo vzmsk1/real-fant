@@ -2,13 +2,13 @@ import '../scss/style.scss';
 
 // ---------------------------------- forms ---------------------------------
 
-import * as forms from './utils/forms.js';
+// import * as forms from './utils/forms.js';
 
-// form fields
-forms.formFieldsInit({ viewPass: false });
+// // form fields
+// forms.formFieldsInit({ viewPass: false });
 
-// form submit
-forms.formSubmit();
+// // form submit
+// forms.formSubmit();
 
 // ---------------------------------- utils ---------------------------------
 

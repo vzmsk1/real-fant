@@ -17,6 +17,18 @@
         }
     }
 
+    .promo-page & {
+        margin-bottom: 20rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 27rem;
+        }
+        .promotion__image {
+            width: 103%;
+            transform: translateX(-2rem);
+        }
+    }
+
     //.landing-page & {
     //    margin-bottom: 22rem;
     //}
