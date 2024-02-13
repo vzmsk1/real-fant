@@ -12,6 +12,9 @@
 
     .promo-page & {
         padding-top: 44.2rem;
+        @include small-tablet{
+            margin-bottom: 19.5rem;
+        }
         &::after {
             inset: unset;
             @media (max-width: 48em) {
@@ -21,6 +24,7 @@
         }
         @media (max-width: 48em) {
             padding-top: 73.2rem;
+            overflow-x: hidden;
         }
         .group__projects {
             @media (max-width: 48em) {
@@ -82,10 +86,6 @@
             .txt-green {
                 word-spacing: 1.8rem;
                 color: $green;
-
-                @media (max-width: 48em) {
-                    color: $white;
-                }
             }
 
             @media (max-width: 48em) {
@@ -274,7 +274,7 @@
             column-gap: 5.5rem;
             padding-left: 5rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 column-gap: 7.5rem;
                 padding-left: 8rem;
             }
@@ -418,20 +418,72 @@
     }
 
     .sites-page & {
-        padding-top: 37rem;
-        margin-bottom: 11.5rem;
+        padding-top: 44rem;
+        margin-bottom: 11rem;
 
         @include small-tablet {
-            padding-top: 69rem;
-            margin-bottom: 28.5rem;
+            padding-top: 72.9rem;
+            margin-bottom: 27rem;
+        }
+
+        &::after {
+            bottom: -182.5rem;
+
+            @media (max-width: 48em) {
+                bottom: 9rem;
+            }
         }
 
         .intro__poster-image {
+            top: 6rem;
             img {
+                height: 112%;
                 @include small-tablet {
                     object-position: -122rem -3rem;
                 }
             }
+
+            @media (max-width: 48em) {
+                top: -27rem;
+                left: -27rem;
+
+                img {
+                    height: 91%;
+                    object-position: inherit;
+                }
+            }
+        }
+
+        .intro__title {
+            margin-bottom: 6rem;
+            line-height: 101%;
+
+            @media (max-width: 48em) {
+                margin-bottom: 6.6rem;
+                line-height: 99%;
+            }
+        }
+
+        .group__projects {
+            @media (max-width: 48em) {
+                transform: translateX(0.4rem);
+            }
+        }
+
+        .group__title {
+            @media (max-width: 48em) {
+                transform: translate(-0.4rem, -0.5rem);
+            }
+        }
+
+        .intro__articles {
+            @media (max-width: 48em) {
+                margin-top: 16rem;
+            }
+        }
+
+        .group__projects::after {
+            height: 88%;
         }
 
         .intro__content {
@@ -495,7 +547,7 @@
         padding-top: 44rem;
         margin-bottom: 11rem;
 
-        @include small-tablet{
+        @include small-tablet {
             padding-top: 77rem;
         }
     }

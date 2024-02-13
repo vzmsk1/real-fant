@@ -26,7 +26,7 @@
     .application-page & {
         margin-bottom: 22rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 29rem;
         }
     }
@@ -34,9 +34,43 @@
     .portal-page & {
         margin-bottom: 22rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 30rem;
         }
+    }
+
+    .sites-page & {
+        margin-bottom: 27rem;
+        .promotion__image {
+            transform: translate(-3.4rem, -0.6rem);
+            width: 103%;
+
+            @media (max-width: 48em) {
+                width: 104%;
+                transform: translate(-2rem, -0.6rem);
+            }
+        }
+    }
+
+    .promo-page & {
+        margin-bottom: 19rem;
+        .promotion__image {
+            transform: translate(-2.4rem, -0.5rem);
+            width: 104%;
+            height: auto;
+
+            @media (max-width: 48em) {
+                width: 108%;
+            }
+        }
+
+        @media (max-width: 48em) {
+            margin-bottom: 23rem;
+        }
+    }
+
+    .services-template-page & {
+        margin-bottom: 24rem;
     }
 
     //.landing-page & {

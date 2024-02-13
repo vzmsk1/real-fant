@@ -54,6 +54,79 @@
         margin-bottom: 25.5rem;
     }
 
+    .sites-page & {
+        margin-bottom: 13.8rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 26.8rem;
+        }
+        .section-head__group {
+            transform: translateY(1.7rem);
+            @media (max-width: 48em) {
+                transform: translate(-1rem, 1.7rem);
+            }
+        }
+
+        .portfolio__item-icon {
+            transform: translateY(1.3rem);
+
+            @media (max-width: 48em) {
+                transform: translate(1.2rem, 1.4rem);
+            }
+        }
+
+        .group {
+            gap: 4.2rem;
+        }
+
+        .group__projects {
+            transform: translateX(-0.5rem);
+
+            @media (max-width: 48em) {
+                transform: translateX(1.5rem);
+            }
+        }
+
+        .portfolio__item-image {
+            @media (max-width: 48em) {
+                margin-bottom: 0.5rem;
+                height: 33rem;
+            }
+        }
+
+        .portfolio__item a {
+            @media (max-width: 48em) {
+                min-height: 45.4rem;
+            }
+        }
+
+        .portfolio__heading {
+            margin-bottom: 8.3rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 8rem;
+                gap: 5rem;
+            }
+        }
+
+        .portfolio__list {
+            @media (max-width: 48em) {
+                margin-bottom: 6.8rem;
+            }
+        }
+
+        .portfolio__link {
+            width: 24.4rem;
+            justify-content: space-between;
+            padding: 0.6rem 0.6rem 0.6rem 4rem;
+
+            @media (max-width: 48em) {
+                width: 36.4rem;
+                padding: 0.6rem 0.6rem 0.6rem 4.2rem;
+            }
+        }
+    }
+
     @include small-tablet {
         margin-bottom: 27rem;
     }
