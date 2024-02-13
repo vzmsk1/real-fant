@@ -12,6 +12,9 @@
 
     .promo-page & {
         padding-top: 44.2rem;
+        @include small-tablet{
+            margin-bottom: 19.5rem;
+        }
         &::after {
             inset: unset;
             @media (max-width: 48em) {
@@ -21,6 +24,7 @@
         }
         @media (max-width: 48em) {
             padding-top: 73.2rem;
+            overflow-x: hidden;
         }
         .group__projects {
             @media (max-width: 48em) {
@@ -82,10 +86,6 @@
             .txt-green {
                 word-spacing: 1.8rem;
                 color: $green;
-
-                @media (max-width: 48em) {
-                    color: $white;
-                }
             }
 
             @media (max-width: 48em) {
@@ -165,14 +165,28 @@
 
     .portal-page & {
         margin-bottom: 2.5rem;
+        padding-top: 43rem;
 
         @include small-tablet {
-            padding-top: 74rem;
+            padding-top: 81rem;
             margin-bottom: 16.5rem;
+            margin-top: -23rem;
+        }
+    }
+
+    .application-page & {
+        padding-top: 43rem;
+        margin-bottom: 10.5rem;
+
+        @include small-tablet{
+            padding-top: 74rem;
+            margin-bottom: 15.5rem;
         }
     }
 
     .home-page & {
+        padding-top: 43rem;
+
         .intro__title {
             @include small-tablet {
                 margin-bottom: 8.3rem;

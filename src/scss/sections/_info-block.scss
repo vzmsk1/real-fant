@@ -4,6 +4,12 @@
         margin-bottom: 25rem;
     }
 
+    .services-template-page & {
+        .info-block__image-wrap {
+            width: 65.3rem;
+        }
+    }
+
     .promo-page & {
         .info-block__image-wrap {
             margin-bottom: 2rem;
@@ -48,6 +54,20 @@
                 line-height: 105%;
                 max-width: 63rem;
             }
+        }
+    }
+
+    .landing-page & {
+        @include small-tablet{
+            .info-block__title {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .application-page & {
+        .info-block__title {
+            margin-bottom: 5.6rem;
         }
     }
 

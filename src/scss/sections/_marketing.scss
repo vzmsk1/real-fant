@@ -260,6 +260,58 @@
             .marketing__image {
                 margin-bottom: 8rem;
             }
+
+            .marketing__group.group {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    .services-template-page & {
+        margin-bottom: 26rem;
+    }
+
+    .portal-page & {
+        .marketing__title {
+            margin-bottom: 6.8rem;
+
+            @include small-tablet{
+                margin-bottom: 3.8rem;
+            }
+        }
+
+        .marketing__info {
+            margin-left: 43rem;
+
+            @include small-tablet{
+                margin-left: 0;
+            }
+
+            &-row {
+                margin-bottom: 7rem;
+            }
+        }
+    }
+
+    .application-page & {
+        margin-bottom: 26rem;
+
+        @include small-tablet{
+            margin-bottom: 38rem;
+        }
+
+        .marketing__info {
+            margin-left: 43rem;
+
+            @include small-tablet{
+                margin-left: 0;
+            }
+        }
+
+        .marketing__content {
+            @include small-tablet{
+                gap: 8.4rem;
+            }
         }
     }
 

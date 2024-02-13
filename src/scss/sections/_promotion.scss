@@ -23,6 +23,22 @@
         }
     }
 
+    .application-page & {
+        margin-bottom: 22rem;
+
+        @include small-tablet {
+            margin-bottom: 29rem;
+        }
+    }
+
+    .portal-page & {
+        margin-bottom: 22rem;
+
+        @include small-tablet {
+            margin-bottom: 30rem;
+        }
+    }
+
     .sites-page & {
         margin-bottom: 27rem;
         .promotion__image {
@@ -51,6 +67,10 @@
         @media (max-width: 48em) {
             margin-bottom: 23rem;
         }
+    }
+
+    .services-template-page & {
+        margin-bottom: 24rem;
     }
 
     //.landing-page & {

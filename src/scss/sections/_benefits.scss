@@ -5,6 +5,38 @@
         margin-bottom: 28rem;
     }
 
+    .portal-page & {
+        .benefits__article-poster {
+            margin-bottom: 5rem;
+        }
+
+        .benefits__content {
+            gap: 2.6rem 3.6rem;
+        }
+
+        margin-bottom: 28.7rem;
+    }
+
+    .application-page & {
+        @include small-tablet{
+            .benefits__article-heading-title {
+                max-width: 26rem;
+            }
+
+            .benefits__article:nth-child(4) {
+                .benefits__article-heading-title {
+                    max-width: 24rem;
+                }
+            }
+        }
+    }
+
+    .services-template-page & {
+        .benefits__article-poster {
+            margin-bottom: 2rem;
+        }
+    }
+
     .landing-page & {
         margin-bottom: 31.7rem;
 
