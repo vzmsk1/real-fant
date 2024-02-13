@@ -23,7 +23,7 @@ export let bodyLockStatus = true;
  * toggles body lock
  * @param {number} delay
  */
-export const bodyLockToggle = (delay = 500) => {
+export const bodyLockToggle = (delay = 0) => {
   if (document.documentElement.classList.contains('lock')) {
     bodyUnlock(delay);
   } else {

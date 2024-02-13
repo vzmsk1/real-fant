@@ -7,10 +7,13 @@
     }
 
     .home-page & {
-        margin-top: -22rem;
+        position: relative;
+        z-index: -1;
+        margin-top: -34rem;
 
         @include small-tablet {
             margin-top: -1rem;
+            margin-bottom: 29rem;
         }
     }
 

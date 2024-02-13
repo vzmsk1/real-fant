@@ -27,6 +27,14 @@
             gap: 3rem;
         }
 
+        &:first-child{
+            gap: 1.5rem;
+
+            @include small-tablet{
+                gap: 3rem;
+            }
+        }
+
         &:last-child {
             @media (min-width: 48em) {
                 align-items: flex-end;
@@ -74,12 +82,14 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin-left: 5rem;
 
         @include small-tablet {
             grid-column: span 2;
             order: -1;
             justify-content: flex-start;
             align-items: flex-start;
+            margin-left: 0;
         }
     }
 
