@@ -23,6 +23,22 @@
         }
     }
 
+    .application-page & {
+        margin-bottom: 22rem;
+
+        @include small-tablet{
+            margin-bottom: 29rem;
+        }
+    }
+
+    .portal-page & {
+        margin-bottom: 22rem;
+
+        @include small-tablet{
+            margin-bottom: 30rem;
+        }
+    }
+
     //.landing-page & {
     //    margin-bottom: 22rem;
     //}

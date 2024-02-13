@@ -14,11 +14,6 @@
             margin-bottom: 8rem;
         }
 
-        .portfolio__link {
-            column-gap: 4.5rem;
-            padding-left: 4rem;
-        }
-
         @include small-tablet{
             .group__button {
                 padding-right: 1.5rem;
@@ -35,11 +30,6 @@
         .portfolio__heading {
             margin-bottom: 9.3rem;
         }
-
-        .btn {
-            column-gap: 3.5rem;
-            padding-left: 4rem;
-        }
     }
 
     .landing-page & {
@@ -48,6 +38,20 @@
         .portfolio__heading {
             margin-bottom: 9.3rem;
         }
+    }
+
+    .portal-page & {
+        .portfolio__heading {
+            margin-bottom: 9.3rem;
+
+            @include small-tablet{
+                margin-bottom: 6.3rem;
+            }
+        }
+    }
+
+    .application-page & {
+        margin-bottom: 25.5rem;
     }
 
     @include small-tablet {
@@ -178,5 +182,7 @@
     &__link {
         margin: 0 auto;
         width: fit-content;
+        column-gap: 4.5rem;
+        padding-left: 4rem;
     }
 }

@@ -23,6 +23,20 @@
         }
     }
 
+    .landing-page & {
+        @include small-tablet{
+            .info-block__title {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .application-page & {
+        .info-block__title {
+            margin-bottom: 5.6rem;
+        }
+    }
+
     // .info-block__container
 
     &__container {

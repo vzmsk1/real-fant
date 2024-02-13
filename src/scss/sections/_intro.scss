@@ -165,14 +165,28 @@
 
     .portal-page & {
         margin-bottom: 2.5rem;
+        padding-top: 43rem;
 
         @include small-tablet {
-            padding-top: 74rem;
+            padding-top: 81rem;
             margin-bottom: 16.5rem;
+            margin-top: -23rem;
+        }
+    }
+
+    .application-page & {
+        padding-top: 43rem;
+        margin-bottom: 10.5rem;
+
+        @include small-tablet{
+            padding-top: 74rem;
+            margin-bottom: 15.5rem;
         }
     }
 
     .home-page & {
+        padding-top: 43rem;
+
         .intro__title {
             @include small-tablet {
                 margin-bottom: 8.3rem;

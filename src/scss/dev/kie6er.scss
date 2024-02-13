@@ -56,6 +56,10 @@
             max-width: 100%;
             &._mobile-only {
                 display: none;
+
+                @include small-tablet{
+                    display: block;
+                }
             }
         }
     }
@@ -182,7 +186,17 @@
                 word-break: break-all;
 
                 &._mobile-only {
-                    display: -webkit-box;
+                   @media (min-width: 48em) {
+                       display: none;
+                   }
+                }
+
+                &._desktop-only {
+                    display: block;
+
+                    @include small-tablet{
+                        display: none;
+                    }
                 }
             }
         }
