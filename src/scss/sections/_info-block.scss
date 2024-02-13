@@ -6,7 +6,7 @@
 
     .promo-page & {
         .info-block__image-wrap {
-            margin-bottom: 1.6rem;
+            margin-bottom: 2rem;
             width: 65.3rem;
 
             @media (max-width: 48em) {
@@ -15,10 +15,38 @@
             }
         }
         .info-block__title {
-            margin-bottom: 6.6rem;
+            margin-bottom: 7.6rem;
+            max-width: 48rem;
+            line-height: 105%;
 
             @media (max-width: 48em) {
-                margin-bottom: 6rem;
+                margin-bottom: 7rem;
+                max-width: 66rem;
+                line-height: 102%;
+            }
+        }
+    }
+
+    .sites-page & {
+        .info-block__image-wrap {
+            margin-bottom: 2.2rem;
+            width: 65.3rem;
+
+            @media (max-width: 48em) {
+                width: 55.4rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .info-block__title {
+            margin-bottom: 7rem;
+            max-width: 48rem;
+            line-height: 110%;
+
+            @media (max-width: 48em) {
+                margin-bottom: 7rem;
+                line-height: 105%;
+                max-width: 63rem;
             }
         }
     }

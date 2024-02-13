@@ -26,20 +26,82 @@
     }
 
     .sites-page & {
-        margin-bottom: 26.7rem;
+        margin-bottom: 25.7rem;
+
+        .benefits__article {
+            &:nth-child(1) .benefits__article-poster-image,
+            &:nth-child(2) .benefits__article-poster-image,
+            &:nth-child(4) .benefits__article-poster-image {
+                height: 26rem;
+            }
+
+            @media (max-width: 48em) {
+                &:nth-child(1) .benefits__article-poster-image,
+                &:nth-child(2) .benefits__article-poster-image,
+                &:nth-child(4) .benefits__article-poster-image {
+                    height: 23rem;
+                }
+            }
+        }
+
+        .benefits__article-poster-image {
+            height: 23rem;
+
+            @media (max-width: 48em) {
+                height: 20rem;
+            }
+        }
+
+        .benefits__article-heading-title {
+            transform: translateY(1rem);
+
+            @media (max-width: 48em) {
+                transform: none;
+                max-width: 20rem;
+            }
+        }
+
+        .benefits__article-poster {
+            margin-bottom: 4rem;
+
+            @media (max-width: 48em) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .benefits__article {
+            padding: 3.8rem 2.2rem 4.6rem 2.2rem;
+
+            @media (max-width: 48em) {
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        .benefits__article-heading {
+            @media (max-width: 48em) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .benefits__article-description {
+            @media (max-width: 48em) {
+                font-size: 2.1rem;
+            }
+        }
     }
 
     .shop-page & {
         margin-bottom: 31.7rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 28.7rem;
         }
 
         .benefits__article {
             padding-bottom: 2rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 padding-bottom: 4rem;
             }
         }
@@ -58,10 +120,37 @@
         @media (max-width: 48em) {
             margin-bottom: 25.7rem;
         }
+        .benefits__article {
+            &:nth-child(3) .benefits__article-poster-image {
+                width: 33rem;
+                height: 34rem;
+            }
+            &:nth-child(4) .benefits__article-poster-image {
+                width: 33rem;
+                height: 34rem;
+            }
+            @media (min-width: 48em) {
+                &:nth-child(3) .benefits__article-poster-image {
+                    height: auto;
+                    max-width: none;
+                    width: 107%;
+                }
+                &:nth-child(4) .benefits__article-poster-image {
+                    max-width: none;
+                    height: auto;
+                    width: 118%;
+                }
+            }
+        }
 
         .benefits__article-poster-image {
             max-width: 25rem;
             height: 24rem;
+
+            @media (max-width: 48em) {
+                max-width: none;
+                width: 21rem;
+            }
         }
 
         .benefits__article-description {
