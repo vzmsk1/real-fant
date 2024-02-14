@@ -161,6 +161,7 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 2.2rem 2.2rem 3.2rem;
             position: relative;
+            height: 100%;
 
             @include small-tablet {
                 gap: 2.6rem;
@@ -202,6 +203,11 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
+            max-width: 93%;
+
+            @include small-tablet{
+                max-width: 87%;
+            }
         }
 
         &-text {
