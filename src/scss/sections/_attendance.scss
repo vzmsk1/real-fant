@@ -1,6 +1,14 @@
 .attendance {
     margin-bottom: 21.4rem;
 
+    .services-page & {
+        .section-head {
+            @include small-tablet{
+                gap: 6rem;
+            }
+        }
+    }
+
     &__heading {
         align-items: flex-start;
         margin-bottom: 8rem;
@@ -21,6 +29,7 @@
         @include small-tablet {
             grid-template-columns: repeat(2, 1fr);
             gap: 4.2rem 2.1rem;
+            margin-bottom: 7.6rem;
         }
     }
 
@@ -51,7 +60,7 @@
             }
 
             @include small-tablet {
-                padding: 0 3rem 3rem;
+                padding: 0 3rem 5rem;
             }
         }
 
@@ -61,8 +70,8 @@
             margin: -1.4rem 0 4rem 4rem;
 
             @include small-tablet {
-                margin: -2rem 0 4rem 0rem;
-                @include sizes(25rem, 24rem);
+                margin: 4rem 0 4rem 0rem;
+                @include sizes(21rem, 23rem);
             }
         }
 
@@ -73,13 +82,12 @@
             line-height: 3rem;
             display: block;
             max-width: 22.5rem;
-            margin-top: auto;
             transition: 0.3s color ease;
 
             @include small-tablet {
                 font-size: 3.6rem;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: 4.2rem;
                 max-width: 22rem;
             }

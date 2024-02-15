@@ -75,6 +75,14 @@ main {
     }
 }
 
+[class*='-page'] {
+    .marketing__info-row {
+        @include small-tablet {
+            margin-bottom: 6rem !important;
+        }
+    }
+}
+
 // --------------------------------------------------------------------------
 
 // header / footer

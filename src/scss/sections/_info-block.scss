@@ -126,6 +126,10 @@
     // .info-block__text
 
     &__text {
+        @include small-tablet{
+            font-weight: 300;
+        }
+
         &_head {
             margin-bottom: 2.5rem;
             font-size: 1.8rem;
@@ -134,6 +138,7 @@
                 margin-bottom: 4rem;
                 font-size: 2.8rem;
                 line-height: 3.7rem;
+                font-weight: 300;
             }
         }
     }
@@ -153,6 +158,9 @@
 
     &__subtitle {
         margin-bottom: 2.5rem;
+        @include small-tablet{
+            font-weight: 300;
+        }
     }
 
     // .info-block__list
@@ -164,6 +172,7 @@
         list-style: inside;
         @media (max-width: 48em) {
             row-gap: 1.5rem;
+            font-weight: 300;
         }
     }
 

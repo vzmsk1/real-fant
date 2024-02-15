@@ -39,7 +39,8 @@
     &__group {
         margin-bottom: 8.2rem;
         @media (max-width: 48em) {
-            margin-bottom: 7rem;
+            margin-bottom: 6rem;
+            row-gap: 1.8rem;
         }
     }
 
@@ -61,7 +62,7 @@
         border: 1px solid rgba(255, 255, 255, 0.6);
         background-color: rgba(255, 255, 255, 0.2);
         @media (max-width: 48em) {
-            padding: 2rem;
+            padding: .4rem;
             height: 243.2rem;
             border-radius: 1.2rem;
         }
@@ -96,7 +97,7 @@
     width: 100%;
     @media (max-width: 48em) {
         flex-direction: column;
-        row-gap: 2.8rem;
+        row-gap: 1.8rem;
     }
 
     // .group-project__item

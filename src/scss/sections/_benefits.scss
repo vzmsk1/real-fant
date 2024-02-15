@@ -8,6 +8,10 @@
     .portal-page & {
         .benefits__article-poster {
             margin-bottom: 5rem;
+
+            @include small-tablet{
+                margin-bottom: 4rem;
+            }
         }
 
         .benefits__content {
@@ -185,32 +189,12 @@
             }
         }
 
-        .benefits__article-description {
-            max-width: 29.9rem;
-
-            @media (max-width: 48em) {
-                font-size: 2rem;
-            }
-        }
-        .benefits__article-heading-title {
-            transform: translateY(0.5rem);
-        }
-        .benefits__article-heading {
-            margin-bottom: 3.5rem;
-        }
         .benefits__article-poster {
             margin-bottom: 4.5rem;
 
             @media (max-width: 48em) {
                 margin-bottom: 4rem;
                 height: 19.5rem;
-            }
-        }
-        .benefits__article {
-            padding: 3.8rem 2.2rem 4.3rem 2.2rem;
-
-            @media (max-width: 48em) {
-                padding: 3rem 2.2rem 5.5rem 2.2rem;
             }
         }
     }

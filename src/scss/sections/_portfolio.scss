@@ -7,6 +7,10 @@
         @include small-tablet {
             margin-top: -17rem;
         }
+
+        .btn__arrow-wrap {
+            transform: rotate(90deg);
+        }
     }
 
     .home-page & {
@@ -14,7 +18,7 @@
             margin-bottom: 8rem;
         }
 
-        @include small-tablet{
+        @include small-tablet {
             .group__button {
                 .btn__arrow-wrap {
                     height: 6.4rem;
@@ -42,7 +46,7 @@
         .portfolio__heading {
             margin-bottom: 9.3rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-bottom: 6.3rem;
             }
         }
@@ -205,7 +209,7 @@
             justify-content: space-between;
             max-width: 93%;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 87%;
             }
         }
