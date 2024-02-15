@@ -3,6 +3,18 @@
 
     @include small-tablet {
         margin-bottom: 25rem;
+
+        .group {
+            justify-content: space-between;
+            max-width: 89%;
+
+            &__projects {
+                &::after {
+                    left: -3.8rem;
+                    width: 0.4rem;
+                }
+            }
+        }
     }
 
     .home-page & {
@@ -138,7 +150,7 @@
             margin-bottom: 3.8rem;
 
             @include small-tablet {
-                margin-bottom: 1.8rem;
+                margin-bottom: 5rem;
             }
         }
     }
@@ -217,8 +229,8 @@
             @media (max-width: 48em) {
                 width: 36.3rem;
                 justify-content: space-between;
-                padding: 1rem 0.7rem 1rem 5rem;
-                column-gap: 3rem;
+                padding: 1rem 1rem 1rem 6rem;
+                column-gap: 6rem;
             }
         }
 
@@ -260,10 +272,6 @@
             .marketing__image {
                 margin-bottom: 8rem;
             }
-
-            .marketing__group.group {
-                margin-left: 2rem;
-            }
         }
     }
 
@@ -275,7 +283,7 @@
         .marketing__title {
             margin-bottom: 6.8rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-bottom: 3.8rem;
             }
         }
@@ -283,7 +291,7 @@
         .marketing__info {
             margin-left: 43rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-left: 0;
             }
 
@@ -296,20 +304,20 @@
     .application-page & {
         margin-bottom: 26rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 38rem;
         }
 
         .marketing__info {
             margin-left: 43rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin-left: 0;
             }
         }
 
         .marketing__content {
-            @include small-tablet{
+            @include small-tablet {
                 gap: 8.4rem;
             }
         }
@@ -399,15 +407,6 @@
     }
 
     @include small-tablet {
-        .group__button {
-            padding: 0.6rem 0.6rem 0.6rem 3.5rem;
-            column-gap: 3.5rem;
-            @media (max-width: 48em) {
-                padding: 1rem 1rem 1rem 6rem;
-                column-gap: 6rem;
-            }
-        }
-
         &_grid {
             @media (min-width: 48em) {
                 .marketing {

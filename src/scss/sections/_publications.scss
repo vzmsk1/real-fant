@@ -7,7 +7,7 @@
     }
 
     @include small-tablet {
-        margin-top: -22rem;
+        margin-top: -23rem;
     }
 
     &__list {
@@ -23,7 +23,7 @@
     }
 
     &__item {
-        padding: 17.9rem 3.1rem 2.9rem;
+        padding: 17.9rem 3.1rem 3.9rem;
         border-radius: 3rem;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(2rem);
@@ -73,14 +73,12 @@
             font-style: normal;
             font-weight: 100;
             line-height: normal;
-            margin-bottom: 1.8rem;
+            margin-bottom: 2.8rem;
 
             @include small-tablet {
-                font-size: 2.48rem;
+                font-size: 2.8rem;
                 font-style: normal;
                 font-weight: 100;
-                line-height: 3rem;
-                margin-bottom: 2.8rem;
             }
         }
 
@@ -107,15 +105,22 @@
             }
 
             @include small-tablet {
-                font-size: 2rem;
+                font-size: 2.8rem;
                 font-style: normal;
                 font-weight: 100;
-                line-height: 3rem;
             }
         }
 
         &-icon {
-            @include rotated-arrow {
+            position: absolute;
+            right: 3.2rem;
+            bottom: 3.2rem;
+
+            @include small-tablet {
+                max-width: 5rem;
+                height: 5rem;
+                bottom: 2.2rem;
+                right: 3.2rem;
             }
         }
     }

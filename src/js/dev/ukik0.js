@@ -1,3 +1,5 @@
+import { remToPx } from '../utils/utils';
+
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.header__nav-item-heading');
 
@@ -43,8 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
             ITEMS_TO_LOAD += SHOWN_ITEMS;
 
             if (ITEMS_TO_LOAD >= items.length) {
-                loadButton.classList.add('--hidden')
+                loadButton.classList.add('--hidden');
             }
         });
     }
+
+    const wrappers = document.querySelectorAll('.slide-cases__image-wrap');
+
+    wrappers.forEach((wrapper) => {
+        wrapper.addEventListener('scroll', ({ target }) => {
+            const scrollLeft = target.scrollLeft;
+            const parentElement = target;
+
+            const maxScrollLeft = target.scrollWidth - target.clientWidth;
+            const scrollPercentage = Math.trunc((scrollLeft / (target.scrollWidth - target.clientWidth)) * 100);
+
+            if (scrollLeft > 0 && scrollLeft < maxScrollLeft) {
+                parentElement.style.transform = `translateX(-10rem)`;
+            };
+
+            if (scrollLeft <= 15) {
+                parentElement.style.transform = `translateX(-2rem)`;
+            }
+
+            if (scrollPercentage >= 95) {
+                parentElement.style.transform = `translateX(-12rem)`;
+            }
+        });
+    });
 });

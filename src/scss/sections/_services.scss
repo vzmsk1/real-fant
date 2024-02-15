@@ -3,7 +3,8 @@
     margin-bottom: 21.4rem;
 
     @include small-tablet {
-        margin-top: -26rem;
+        margin-top: -19rem;
+        margin-bottom: 24.4rem;
     }
 
     &__list {
@@ -15,7 +16,7 @@
 
         @include small-tablet {
             grid-template-columns: repeat(2, 1fr);
-            gap: 2.2rem;
+            gap: 1.7rem;
             margin-left: 0;
         }
     }
@@ -50,8 +51,8 @@
             margin-bottom: 3.6rem;
 
             @include small-tablet {
-                @include sizes(22rem, 24rem);
-                margin-bottom: 1.6rem;
+                @include sizes(21rem, 23rem);
+                margin-bottom: 3.6rem;
             }
 
             img {
@@ -72,7 +73,7 @@
                 max-width: 100%;
                 font-size: 3.6rem;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: 4.2rem;
             }
         }

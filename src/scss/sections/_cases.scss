@@ -31,6 +31,8 @@
 
             @media (max-width: 48em) {
                 transform: translateX(-0.5rem);
+                gap: 5rem;
+                padding-left: 6rem;
             }
         }
         .cases__head {
@@ -50,7 +52,7 @@
             margin-bottom: 0.91rem;
 
             @media (max-width: 48em) {
-                margin-bottom: 0.5rem;
+                margin-bottom: 0rem;
             }
         }
         .bullets {
@@ -86,6 +88,8 @@
                 margin-bottom: 12.8rem;
                 height: 82rem;
                 transform: translateX(-2rem);
+                width: calc(100% + 15rem);
+                transition: .3s transform ease;
             }
         }
         .slide-cases__content::after {
@@ -98,7 +102,7 @@
                 margin-top: -9rem;
                 transform: translateX(-2rem);
                 width: 107%;
-                padding: 3.4rem 3rem 4.2rem 2.6rem;
+                padding: 3.4rem 3rem 3.4rem 2.6rem;
             }
         }
         .slide-cases__subtitle {
@@ -185,12 +189,10 @@
 
     &__btn {
         &.btn {
-            padding: 1rem 1rem 1rem 6rem;
-            column-gap: 6rem;
             @media (min-width: 48em) {
-                padding: 0.6rem 0.6rem 0.6rem 4rem;
+                padding: 1rem 0.8rem 1rem 4rem;
                 align-self: center;
-                column-gap: 4rem;
+                column-gap: 3.2rem;
             }
         }
     }
@@ -220,7 +222,7 @@
             height: 74rem;
             width: 72rem;
             overflow-x: scroll;
-            border-radius: 2.6rem;
+            border-radius: 2.6rem 0 0 2.6rem;
             &::-webkit-scrollbar {
                 position: absolute;
                 top: calc(100% + 4rem);
@@ -291,7 +293,8 @@
     &__title {
         margin-bottom: 0.7rem;
         @media (max-width: 48em) {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0rem;
+            text-align: center;
         }
     }
 

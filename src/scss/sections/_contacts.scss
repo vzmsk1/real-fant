@@ -46,7 +46,7 @@
     // .contacts__title
 
     &__title {
-        margin-bottom: 10.1rem;
+        margin-bottom: 8.1rem;
         max-width: 87rem;
         @media (max-width: 48em) {
             margin-bottom: 5rem;
@@ -58,7 +58,7 @@
     // .contacts__list
 
     &__list {
-        margin-bottom: 14rem;
+        margin-bottom: 16rem;
         @media (max-width: 48em) {
             margin-bottom: 12rem;
         }
@@ -72,6 +72,10 @@
             margin-bottom: 0;
             padding-top: 6.5rem;
             flex: 0 0 64.6rem;
+        }
+
+        @include small-tablet{
+            margin-bottom: 24rem;
         }
     }
 
@@ -103,18 +107,18 @@
     flex-direction: column;
     row-gap: 5.3rem;
     @media (max-width: 48em) {
-        row-gap: 2rem;
+        row-gap: 5rem;
     }
 
     // .list-contacts__item
 
     &__item {
-        padding-left: 6rem;
+        padding-left: 5rem;
         display: flex;
         flex-direction: column;
         row-gap: 0.5rem;
         @media (max-width: 48em) {
-            padding-left: 7rem;
+            padding-left: 9rem;
             row-gap: 1rem;
         }
         &:hover{
@@ -164,6 +168,11 @@
     &__text {
         position: relative;
         transition: .3s color ease;
+
+        @include small-tablet{
+            font-size: 3.6rem;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -178,6 +187,7 @@
                 top: -2.5rem;
                 width: 4.8rem;
                 height: 4.8rem;
+                left: -3.6rem;
             }
         }
     }
@@ -196,7 +206,7 @@
         row-gap: 1.1rem;
         @media (max-width: 48em) {
             margin-bottom: 6rem;
-            row-gap: 2.8rem;
+            row-gap: 2.1rem;
         }
     }
 

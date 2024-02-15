@@ -10,9 +10,17 @@
         padding-top: 69rem;
     }
 
+    .services-page & {
+        .btn__arrow-wrap {
+            @include small-tablet {
+                flex: 0 0 6.5rem;
+            }
+        }
+    }
+
     .promo-page & {
         padding-top: 44.2rem;
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 19.5rem;
         }
         &::after {
@@ -108,17 +116,6 @@
                 gap: 1rem;
             }
         }
-        .btn {
-            padding: 0.3rem 0.6rem 0.6rem 2rem;
-
-            @media (max-width: 48em) {
-                padding: 0.6rem 0.6rem 0.6rem 3rem;
-                column-gap: 3.5rem;
-                height: auto;
-                width: 58%;
-                justify-content: space-between;
-            }
-        }
         .btn__arrow-wrap svg {
             width: 2.5rem;
             height: 2.5rem;
@@ -171,6 +168,33 @@
             padding-top: 81rem;
             margin-bottom: 16.5rem;
             margin-top: -23rem;
+
+            .intro__poster-image_has-backdrop::after {
+                display: none;
+            }
+
+
+            .intro__article{
+                &:nth-child(3) {
+                    .intro__article-link {
+                        padding: 11.5rem 1rem 3rem
+                    }
+                }
+            }
+        }
+
+        ._desktop-only {
+            @include small-tablet{
+                display: none !important;
+            }
+        }
+
+        ._mobile-only {
+            display: none !important;
+
+            @include small-tablet{
+                display: block !important;
+            }
         }
     }
 
@@ -178,7 +202,7 @@
         padding-top: 43rem;
         margin-bottom: 10.5rem;
 
-        @include small-tablet{
+        @include small-tablet {
             padding-top: 74rem;
             margin-bottom: 15.5rem;
         }
@@ -223,10 +247,6 @@
 
         @include small-tablet {
             padding-top: 72rem;
-
-            .group__button {
-                height: 9.5rem;
-            }
 
             .intro__articles {
                 margin-top: 19rem;
@@ -313,7 +333,7 @@
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 2.8rem;
-                    margin-top: 11rem;
+                    margin-top: 7.3rem;
                 }
             }
 
@@ -330,7 +350,7 @@
 
                 @include small-tablet {
                     padding: 1.8rem;
-                    border-radius: 4rem;
+                    border-radius: 5rem;
                     gap: 3.6rem;
                 }
 
@@ -377,7 +397,8 @@
                         top: 50%;
                         transform: translate(-50%, -50%);
                         width: auto;
-                        height: auto;
+                        height: 11rem;
+                        z-index: auto;
                     }
                 }
 
@@ -424,6 +445,10 @@
         @include small-tablet {
             padding-top: 72.9rem;
             margin-bottom: 27rem;
+
+            .intro__article-link {
+                padding: 11.5rem 0rem 3rem;
+            }
         }
 
         &::after {
@@ -497,6 +522,14 @@
         @include small-tablet {
             padding-top: 75rem;
             margin-bottom: 15.5rem;
+
+            .intro__article {
+                &:nth-child(1) {
+                    .intro__article-link {
+                        padding: 11.5rem 1rem 3rem;
+                    }
+                }
+            }
         }
 
         .intro__poster-image {
@@ -515,7 +548,7 @@
 
         .intro__title {
             max-width: 30rem;
-            margin-bottom: 2.3rem;
+            margin-bottom: 7.3rem;
         }
 
         .intro__description {
@@ -533,12 +566,6 @@
 
             @include small-tablet {
                 padding-bottom: 17rem;
-            }
-        }
-
-        .intro__poster-image img {
-            @include small-tablet {
-                object-position: -70rem -1rem;
             }
         }
     }
