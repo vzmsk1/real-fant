@@ -2,7 +2,11 @@
     margin-bottom: 20rem;
 
     @include small-tablet {
-        overflow-x: hidden;
+        overflow-y: hidden;
+
+        &__container {
+            overflow: hidden;
+        }
     }
 
     .promo-page & {
